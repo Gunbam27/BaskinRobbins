@@ -1,0 +1,111 @@
+@font-face {
+  font-family: AppleSDGothicNeoM;
+  src: url(../fonts/AppleSDGothicNeoM.woff) format("woff");
+}
+@font-face {
+  font-family: AppleSDGothicNeoL;
+  src: url(../fonts/AppleSDGothicNeoL.woff) format("woff");
+}
+@font-face {
+  font-family: AppleSDGothicNeoEB;
+  src: url(../fonts/AppleSDGothicNeoEB.woff) format("woff");
+}
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dt, dd, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  font-family: AppleSDGothicNeoM;
+}
+
+.header {
+  max-width: 1170px;
+  height: 79px;
+  margin: auto;
+}
+.header__logobox {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.header__logobox .logo {
+  position: relative;
+  top: 10px;
+}
+.header__logobox--left-box {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  font-size: 21px;
+}
+.header__logobox--left-box i {
+  margin-left: 15px;
+}
+.header__logobox--right-box {
+  position: absolute;
+  top: 31px;
+  right: 0;
+  color: black;
+}
+.header__logobox--right-box ul {
+  display: flex;
+}
+.header__logobox--right-box ul li {
+  margin-right: 15px;
+}
+.header__logobox--right-box ul li a {
+  color: black;
+}
+.header__logobox--right-box ul li:nth-child(1)::after {
+  content: " | ";
+}
+.header__logobox--right-box ul li:nth-child(3) a {
+  color: #fc60aa;
+}
+.header__logobox h1 {
+  margin: auto;
+  width: 378px;
+  height: 44px;
+}
+.header__logobox h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/logo1.png) no-repeat center center/contain;
+  text-indent: -9999em;
+}
+.header .navbar {
+  width: 100%;
+  height: 100%;
+  line-height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+.header .navbar > ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.header .navbar > ul li {
+  width: 160px;
+  height: 61px;
+}
+.header .navbar > ul li > a {
+  font-size: 18px;
+  font-family: "AppleSDGothicNeoEB";
+}
+.header .navbar__smenu ul li a {
+  font-size: 16px;
+  font-family: "AppleSDGothicNeoL";
+}
+
+/*# sourceMappingURL=style.css.map */

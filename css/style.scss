@@ -1,0 +1,115 @@
+@charset 'utf-8';
+@font-face {
+    font-family: AppleSDGothicNeoM;
+    src: url(../fonts/AppleSDGothicNeoM.woff) format("woff");
+  }
+  @font-face {
+    font-family: AppleSDGothicNeoL;
+    src: url(../fonts/AppleSDGothicNeoL.woff) format("woff");
+  }
+  @font-face {
+    font-family: AppleSDGothicNeoEB;
+    src: url(../fonts/AppleSDGothicNeoEB.woff) format("woff");
+  }
+// Setting //
+html,body,h1,h2,h3,h4,h5,h6,ul,ol,dt,dd,p{
+    margin:0;
+    padding:0;
+}
+ul,ol,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+*{
+    font-family: AppleSDGothicNeoM;
+}
+$bold:"AppleSDGothicNeoEB";
+$semibold:" AppleSDGothicNeoM";
+$light:"AppleSDGothicNeoL";
+// Setting-done //
+
+.header{
+    max-width:1170px;
+    height:79px;
+    margin:auto;
+    &__logobox{
+        position:relative;
+        height:100%;
+        width:100%;
+        .logo{
+            position:relative;
+            top:10px;
+        }
+        &--left-box{
+            position: absolute;
+            top: 28px;
+            left:0;
+            font-size: 21px;
+            i{
+                margin-left:15px;
+            }
+        }
+        &--right-box{
+            position: absolute;
+            top: 31px;
+            right:0;
+            color:black;
+            ul{
+                display:flex;
+                li{
+                    margin-right:15px;
+                    a{
+                        color:black;
+                    }
+                    &:nth-child(1)::after{
+                        content: " | ";
+                    }
+                    &:nth-child(3) a{
+                        color:#fc60aa;
+                    }
+                }
+            }
+        }
+        h1{
+            margin:auto;
+            width:378px;
+            height:44px;
+            a{
+            display:block;
+            width: 100%;
+            height: 100%;
+            background: url(../img/logo1.png) no-repeat center center/contain;
+            text-indent: -9999em;
+            }
+        }
+        
+    }
+    .navbar{
+        width:100%;
+        height:100%;
+        line-height: 80px;
+        border-bottom: 1px solid #ccc;
+        > ul{
+            display:flex;
+            justify-content: center;
+            text-align: center;
+            li{
+                width:160px;
+                height:61px;
+                >a{
+                    font-size: 18px;
+                    font-family: $bold;
+                }
+            }
+        }
+        &__smenu{
+            ul li a{
+                font-size: 16px;
+                font-family:$light;
+            }
+        }
+    }
+}
