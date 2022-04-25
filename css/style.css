@@ -30,7 +30,6 @@ a {
 
 .header {
   max-width: 1170px;
-  height: 79px;
   margin: auto;
 }
 .header__logobox {
@@ -89,23 +88,66 @@ a {
   height: 100%;
   line-height: 80px;
   border-bottom: 1px solid #ccc;
+  /*&:before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      display: block;
+      top: 106px;
+      left: 50%;
+      background: #f0f0f0;
+      width: 100%;
+      max-width: 1170px;
+      height: 420px;
+      -ms-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+  }*/
+}
+.header .navbar__bg {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  display: none;
+  top: 106px;
+  left: 50%;
+  background: #f0f0f0;
+  width: 100%;
+  max-width: 1170px;
+  height: 420px;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .header .navbar > ul {
   display: flex;
   justify-content: center;
   text-align: center;
 }
-.header .navbar > ul li {
+.header .navbar > ul .navbar__smenu {
+  position: relative;
   width: 160px;
   height: 61px;
+  transition: height 0.4s ease-out;
 }
-.header .navbar > ul li > a {
+.header .navbar > ul .navbar__smenu > a {
   font-size: 18px;
   font-family: "AppleSDGothicNeoEB";
 }
-.header .navbar__smenu ul li a {
-  font-size: 16px;
+.header .navbar > ul .navbar__smenu ul li a {
   font-family: "AppleSDGothicNeoL";
+}
+.header .navbar > ul .navbar__smenu ul li a:hover {
+  border-bottom: 1px solid #fc60aa;
+}
+.header .navbar > ul .navbar__smenu:hover .smenu {
+  display: block;
+}
+.header .navbar > ul .navbar__smenu .smenu {
+  position: absolute;
+  display: none;
+  width: 160px;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=style.css.map */

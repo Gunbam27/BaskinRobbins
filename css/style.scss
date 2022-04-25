@@ -33,7 +33,6 @@ $light:"AppleSDGothicNeoL";
 
 .header{
     max-width:1170px;
-    height:79px;
     margin:auto;
     &__logobox{
         position:relative;
@@ -92,24 +91,72 @@ $light:"AppleSDGothicNeoL";
         height:100%;
         line-height: 80px;
         border-bottom: 1px solid #ccc;
+        &__bg{
+            content: '';
+            z-index: 1;
+            position: absolute;
+            display: none;
+            top: 106px;
+            left: 50%;
+            background: #f0f0f0;
+            width: 100%;
+            max-width: 1170px;
+            height: 420px;
+            -ms-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        /*&:before {
+            content: '';
+            z-index: 1;
+            position: absolute;
+            display: block;
+            top: 106px;
+            left: 50%;
+            background: #f0f0f0;
+            width: 100%;
+            max-width: 1170px;
+            height: 420px;
+            -ms-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }*/
+        
         > ul{
             display:flex;
             justify-content: center;
             text-align: center;
-            li{
+            .navbar__smenu{
+                position: relative;
                 width:160px;
                 height:61px;
+                transition: height 0.4s ease-out;
                 >a{
                     font-size: 18px;
                     font-family: $bold;
                 }
+                ul li a{
+                    font-family: $light;
+                    &:hover{
+                        border-bottom: 1px solid #fc60aa;
+                    }
+                }
+                // &:hover{
+                //     height: 475px;
+                // }
+                &:hover .smenu{
+                    display:block;
+                }
+                .smenu{
+                position: absolute;
+                display:none;
+                width: 160px;
+                z-index: 10;
+                }
             }
         }
-        &__smenu{
-            ul li a{
-                font-size: 16px;
-                font-family:$light;
-            }
-        }
+        
     }
 }
+
+
