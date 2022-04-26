@@ -26,16 +26,20 @@ a{
 *{
     font-family: AppleSDGothicNeoM;
 }
+.title{
+    font-size: 40px;
+}
 $bold:"AppleSDGothicNeoEB";
 $semibold:" AppleSDGothicNeoM";
 $light:"AppleSDGothicNeoL";
 // Setting-done //
-
+header{max-width: 1920px;}
 .header{
     max-width:1170px;
     margin:auto;
     &__logobox{
         position:relative;
+        margin: 20px 0;
         height:100%;
         width:100%;
         .logo{
@@ -44,7 +48,7 @@ $light:"AppleSDGothicNeoL";
         }
         &--left-box{
             position: absolute;
-            top: 28px;
+            top: 24px;
             left:0;
             font-size: 21px;
             i{
@@ -53,7 +57,7 @@ $light:"AppleSDGothicNeoL";
         }
         &--right-box{
             position: absolute;
-            top: 31px;
+            top: 27px;
             right:0;
             color:black;
             ul{
@@ -84,7 +88,6 @@ $light:"AppleSDGothicNeoL";
             text-indent: -9999em;
             }
         }
-        
     }
     .navbar{
         width:100%;
@@ -92,36 +95,16 @@ $light:"AppleSDGothicNeoL";
         line-height: 80px;
         border-bottom: 1px solid #ccc;
         &__bg{
-            content: '';
-            z-index: 1;
             position: absolute;
-            display: none;
-            top: 106px;
+            top: 146px;
             left: 50%;
-            background: #f0f0f0;
             width: 100%;
-            max-width: 1170px;
-            height: 420px;
-            -ms-transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
+            //max-width: 1170px;
+            height: 0px;
+            background: #ffffff;
+            z-index: 10;
             transform: translateX(-50%);
         }
-        /*&:before {
-            content: '';
-            z-index: 1;
-            position: absolute;
-            display: block;
-            top: 106px;
-            left: 50%;
-            background: #f0f0f0;
-            width: 100%;
-            max-width: 1170px;
-            height: 420px;
-            -ms-transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-        }*/
-        
         > ul{
             display:flex;
             justify-content: center;
@@ -130,7 +113,7 @@ $light:"AppleSDGothicNeoL";
                 position: relative;
                 width:160px;
                 height:61px;
-                transition: height 0.4s ease-out;
+                transition: all 0.4s ease-out;
                 >a{
                     font-size: 18px;
                     font-family: $bold;
@@ -141,21 +124,85 @@ $light:"AppleSDGothicNeoL";
                         border-bottom: 1px solid #fc60aa;
                     }
                 }
-                // &:hover{
-                //     height: 475px;
-                // }
-                &:hover .smenu{
-                    display:block;
-                }
                 .smenu{
                 position: absolute;
+                top: 62px;
                 display:none;
                 width: 160px;
-                z-index: 10;
+                z-index: 20;
+                transition: all 0.4s ease-out;
                 }
             }
         }
         
+    }
+}
+main{
+    overflow: hidden;
+    width: 100%;
+    max-width: 1920px;
+    height: 900px;
+    .banner{
+        // position: relative;
+        // height: 700px;
+        &__image{
+            position: relative;
+        #bigRound{
+            position: absolute;
+            right: 0;
+            z-index: -10;
+        }
+        #smallRound{
+            position: absolute;
+            right: 0;
+            z-index: 1;
+        }
+        #twoRound{
+            position: absolute;
+            left:200px;
+            top:120px;
+        }
+        .image{
+            position: absolute;
+            top: 0;
+            left: 60%;
+            transform: translateX(-60%);
+            .bnimg{
+            // position: absolute;
+            // z-index: -1;
+            // top: 30px;
+            // left: 850px;
+            // transform: rotate(-40deg);
+            display: block;
+            margin: auto;
+            transform: rotate(-40deg);
+        }
+        }
+        
+        }
+        
+        
+        &__txt{
+            position: relative;
+            top:300px;
+            left:300px;
+            p{
+                margin-top:30px;
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+        &__pagenb{
+            position: absolute;
+            bottom: 230px;
+            text-align: right;
+            .page{
+                left: 0;
+                width: 320px;
+                height: 1px;
+                background-color: black;
+            }
+        }
     }
 }
 

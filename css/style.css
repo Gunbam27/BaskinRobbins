@@ -28,12 +28,21 @@ a {
   font-family: AppleSDGothicNeoM;
 }
 
+.title {
+  font-size: 40px;
+}
+
+header {
+  max-width: 1920px;
+}
+
 .header {
   max-width: 1170px;
   margin: auto;
 }
 .header__logobox {
   position: relative;
+  margin: 20px 0;
   height: 100%;
   width: 100%;
 }
@@ -43,7 +52,7 @@ a {
 }
 .header__logobox--left-box {
   position: absolute;
-  top: 28px;
+  top: 24px;
   left: 0;
   font-size: 21px;
 }
@@ -52,7 +61,7 @@ a {
 }
 .header__logobox--right-box {
   position: absolute;
-  top: 31px;
+  top: 27px;
   right: 0;
   color: black;
 }
@@ -88,35 +97,15 @@ a {
   height: 100%;
   line-height: 80px;
   border-bottom: 1px solid #ccc;
-  /*&:before {
-      content: '';
-      z-index: 1;
-      position: absolute;
-      display: block;
-      top: 106px;
-      left: 50%;
-      background: #f0f0f0;
-      width: 100%;
-      max-width: 1170px;
-      height: 420px;
-      -ms-transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
-  }*/
 }
 .header .navbar__bg {
-  content: "";
-  z-index: 1;
   position: absolute;
-  display: none;
-  top: 106px;
+  top: 146px;
   left: 50%;
-  background: #f0f0f0;
   width: 100%;
-  max-width: 1170px;
-  height: 420px;
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
+  height: 0px;
+  background: #ffffff;
+  z-index: 10;
   transform: translateX(-50%);
 }
 .header .navbar > ul {
@@ -128,7 +117,7 @@ a {
   position: relative;
   width: 160px;
   height: 61px;
-  transition: height 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 .header .navbar > ul .navbar__smenu > a {
   font-size: 18px;
@@ -140,14 +129,70 @@ a {
 .header .navbar > ul .navbar__smenu ul li a:hover {
   border-bottom: 1px solid #fc60aa;
 }
-.header .navbar > ul .navbar__smenu:hover .smenu {
-  display: block;
-}
 .header .navbar > ul .navbar__smenu .smenu {
   position: absolute;
+  top: 62px;
   display: none;
   width: 160px;
-  z-index: 10;
+  z-index: 20;
+  transition: all 0.4s ease-out;
+}
+
+main {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1920px;
+  height: 900px;
+}
+main .banner__image {
+  position: relative;
+}
+main .banner__image #bigRound {
+  position: absolute;
+  right: 0;
+  z-index: -10;
+}
+main .banner__image #smallRound {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+main .banner__image #twoRound {
+  position: absolute;
+  left: 200px;
+  top: 120px;
+}
+main .banner__image .image {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  transform: translateX(-60%);
+}
+main .banner__image .image .bnimg {
+  display: block;
+  margin: auto;
+  transform: rotate(-40deg);
+}
+main .banner__txt {
+  position: relative;
+  top: 300px;
+  left: 300px;
+}
+main .banner__txt p {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 30px;
+}
+main .banner__pagenb {
+  position: absolute;
+  bottom: 230px;
+  text-align: right;
+}
+main .banner__pagenb .page {
+  left: 0;
+  width: 320px;
+  height: 1px;
+  background-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
