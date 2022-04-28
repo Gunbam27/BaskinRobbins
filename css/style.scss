@@ -24,6 +24,7 @@ a{
     color:black;
 }
 *{
+    outline: 1px solid lime;
     font-family: AppleSDGothicNeoM;
 }
 .title{
@@ -33,22 +34,23 @@ $bold:"AppleSDGothicNeoEB";
 $semibold:" AppleSDGothicNeoM";
 $light:"AppleSDGothicNeoL";
 // Setting-done //
-header{max-width: 1920px;}
+header{max-width: 1920px;margin: auto;}
 .header{
     max-width:1170px;
     margin:auto;
     &__logobox{
         position:relative;
-        margin: 20px 0;
         height:100%;
         width:100%;
+        box-sizing: border-box;
+        padding: 20px 0;
         .logo{
             position:relative;
             top:10px;
         }
         &--left-box{
             position: absolute;
-            top: 24px;
+            top: 31px;
             left:0;
             font-size: 21px;
             i{
@@ -57,7 +59,7 @@ header{max-width: 1920px;}
         }
         &--right-box{
             position: absolute;
-            top: 27px;
+            top: 31px;
             right:0;
             color:black;
             ul{
@@ -138,19 +140,19 @@ header{max-width: 1920px;}
     }
 }
 main{
-    overflow: hidden;
-    width: 100%;
+    position:relative;
+    margin: auto;
     max-width: 1920px;
-    height: 900px;
+    overflow: hidden;
     .banner{
-        // position: relative;
-        // height: 700px;
+        height: 800px;
         &__image{
             position: relative;
         #bigRound{
             position: absolute;
             right: 0;
             z-index: -10;
+            overflow: hidden;
         }
         #smallRound{
             position: absolute;
@@ -194,7 +196,7 @@ main{
         }
         &__pagenb{
             position: absolute;
-            bottom: 230px;
+            top: 550px;
             text-align: right;
             .page{
                 left: 0;
