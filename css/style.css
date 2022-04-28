@@ -201,5 +201,68 @@ main .banner__pagenb .page {
   height: 1px;
   background-color: black;
 }
+main .menu {
+  max-width: 1170px;
+  margin: auto;
+  padding: 90px 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+main .menu__card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+main .menu__card--com {
+  width: 300px;
+  height: 300px;
+  margin: 40px 0;
+  background-color: #FEEEDA;
+  border-radius: 45px;
+  box-shadow: 4px 4px #ccc;
+}
+main .event {
+  position: relative;
+  max-width: 1920px;
+  margin: auto;
+  padding: 30px 0;
+  text-align: center;
+  background-color: #FF8D9A;
+}
+main .event h2 {
+  text-indent: 999;
+}
+main .event img {
+  height: 520px;
+  border-radius: 45px;
+}
+main .event-btn {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  line-height: 22px;
+  border: 3px solid #fff;
+  background: transparent;
+  color: white;
+  border-radius: 50%;
+}
+main .event:nth-child(1) {
+  left: 10%;
+}
+main .event:nth-child(2) {
+  right: 10%;
+}
+main .store {
+  max-width: 1170px;
+  margin: auto;
+  text-align: center;
+}
+main .insta {
+  max-width: 1170px;
+  margin: auto;
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */
