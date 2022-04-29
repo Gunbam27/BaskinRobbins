@@ -213,13 +213,36 @@ main .menu__card {
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
+main .menu__card:nth-child(1) img {
+  width: 209px;
+  left: 20px;
+}
 main .menu__card--com {
+  position: relative;
   width: 300px;
   height: 300px;
   margin: 40px 0;
+  padding: 10px 20px;
+  box-sizing: border-box;
   background-color: #FEEEDA;
   border-radius: 45px;
   box-shadow: 4px 4px #ccc;
+  text-align: left;
+}
+main .menu__card--com a {
+  font-size: 22px;
+  font-family: "AppleSDGothicNeoEB";
+  color: #FF8D9A;
+}
+main .menu__card--com img {
+  position: absolute;
+  left: 0px;
+  width: 300px;
+}
+main .menu__card--com .size {
+  width: 206px;
+  height: 260px;
+  padding: 8% 16%;
 }
 main .event {
   position: relative;
@@ -274,18 +297,91 @@ main .insta {
   max-width: 1170px;
   margin: auto;
   text-align: center;
-  padding: 90px 0;
+  padding: 70px 0;
+}
+main .insta h2 {
+  position: relative;
 }
 main .insta h2::before {
   position: absolute;
-  top: 177px;
+  top: 13px;
   left: 0;
+  display: inline-block;
+  text-align: center;
+  content: "";
+  width: 35%;
+  height: 1px;
+  background: #ccc;
+}
+main .insta h2::after {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  display: inline-block;
+  text-align: center;
+  content: "";
+  width: 35%;
+  height: 1px;
+  background: #ccc;
+}
+main .insta__grid {
+  display: grid;
+  max-width: 1170px;
+  padding: 50px 108px;
+  grid-template-columns: repeat(4, 238px);
+  grid-template-rows: repeat(3, 238px);
+  grid-gap: 3px 3px;
+}
+main .insta__grid img {
+  width: 238px;
+  height: 238px;
+  object-fit: cover;
+}
+
+footer {
+  max-width: 1920px;
+  margin: auto;
+  background-color: #f6f6f6;
+}
+footer .info {
+  position: relative;
+  padding: 20px 0;
+  text-align: center;
+}
+footer .info a {
+  font-size: 14px;
+  color: #888888;
+  font-family: "AppleSDGothicNeoL";
+}
+footer .info::after {
+  position: absolute;
+  top: 60px;
+  right: 0;
   display: inline-block;
   text-align: center;
   content: "";
   width: 100%;
   height: 1px;
-  background: #dcd7d1;
+  background: #ccc;
+}
+footer .addr {
+  display: flex;
+  max-width: 1170px;
+  margin: auto;
+}
+footer .addr__left {
+  width: 50%;
+}
+footer .addr__left h2 a {
+  display: block;
+  height: 40px;
+  background: url(../img/logo1.png) no-repeat center center/contain;
+  text-indent: -9999em;
+}
+footer .addr__left h2 address {
+  padding: 10px 0px 10px 148px;
+  text-align: left;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
