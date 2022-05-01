@@ -19,12 +19,13 @@ html,body,h1,h2,h3,h4,h5,h6,ul,ol,dt,dd,p{
 ul,ol,li{
     list-style: none;
 }
-a{
+a{  margin:0;
+    padding:0;
+    border:0;
     text-decoration: none;
     color:black;
 }
 *{
-    outline: 1px solid lime;
     font-family: AppleSDGothicNeoM;
 }
 .title{
@@ -369,21 +370,86 @@ footer{
     margin: auto;
     &__left{
         width:50%;
+        color: #555;
         h2{
             
             a{
-            display:block;
+            display: block;
+            width: 282px;
             height: 40px;
+            padding: 10px 0;
             background: url(../img/logo1.png) no-repeat center center/contain;
             text-indent: -9999em;
             }
-            address{
-                padding: 10px 0px 10px 148px;
-                text-align: left;
-                font-size: 14px;
+        }
+        address{
+            padding: 10px 0;
+            text-align: left;
+            font-size: 14px;
+        }
+        .brand{
+            padding: 20px 0px 20px 0px;
+            &__list{
+                display:flex;
+                justify-content: flex-start;
+                height: 31px;
+                li{height:31px;}
+                .li_1{}
+                .li_2{padding: 0 10px;}
+                .li_3{padding: 0 10px;}
+                .li_4{padding: 0 0 0 10px;}
+                .li_5{img{width: 31px;}}
             }
         }
     }
-    &__right{}
+    &__right{
+        display: flex;
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: flex-end;
+        width:50%;
+        color: #555;
+        .sns{
+            &__list{
+            padding: 8px 0;
+            display: flex;
+            justify-content: flex-start;
+            height: 37px;
+            font-size: 24px;
+                li{
+                    padding: 0 10px;
+                    .circle{
+                    width: 35px;
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                    height: 33px;
+                    text-align: center;
+                    line-height: 35px;
+                    padding: 2px 0 0 0px;
+                    }
+                    i{color: #aea498;}
+                    i:hover{color:#3d3a36;}
+                }
+            }
+        }
+        .fam-site{
+            width:220px;
+            height:35px;
+            border-radius:30px;
+            border:1px solid #ccc;
+            &__drop{
+                line-height: 36px;
+                color:#555;
+                span{padding: 0 10px;}
+                i{position: relative;left: 102px;font-size: 20px;}
+            }
+            &__down{
+                display:none;
+                max-height: 106px;
+                padding: 0 10px;
+                overflow-y: scroll;
+            }
+        }
+    }
     }
 }

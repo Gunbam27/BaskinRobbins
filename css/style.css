@@ -20,12 +20,14 @@ ul, ol, li {
 }
 
 a {
+  margin: 0;
+  padding: 0;
+  border: 0;
   text-decoration: none;
   color: black;
 }
 
 * {
-  outline: 1px solid lime;
   font-family: AppleSDGothicNeoM;
 }
 
@@ -371,17 +373,100 @@ footer .addr {
 }
 footer .addr__left {
   width: 50%;
+  color: #555;
 }
 footer .addr__left h2 a {
   display: block;
+  width: 282px;
   height: 40px;
+  padding: 10px 0;
   background: url(../img/logo1.png) no-repeat center center/contain;
   text-indent: -9999em;
 }
-footer .addr__left h2 address {
-  padding: 10px 0px 10px 148px;
+footer .addr__left address {
+  padding: 10px 0;
   text-align: left;
   font-size: 14px;
+}
+footer .addr__left .brand {
+  padding: 20px 0px 20px 0px;
+}
+footer .addr__left .brand__list {
+  display: flex;
+  justify-content: flex-start;
+  height: 31px;
+}
+footer .addr__left .brand__list li {
+  height: 31px;
+}
+footer .addr__left .brand__list .li_2 {
+  padding: 0 10px;
+}
+footer .addr__left .brand__list .li_3 {
+  padding: 0 10px;
+}
+footer .addr__left .brand__list .li_4 {
+  padding: 0 0 0 10px;
+}
+footer .addr__left .brand__list .li_5 img {
+  width: 31px;
+}
+footer .addr__right {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
+  color: #555;
+}
+footer .addr__right .sns__list {
+  padding: 8px 0;
+  display: flex;
+  justify-content: flex-start;
+  height: 37px;
+  font-size: 24px;
+}
+footer .addr__right .sns__list li {
+  padding: 0 10px;
+}
+footer .addr__right .sns__list li .circle {
+  width: 35px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  height: 33px;
+  text-align: center;
+  line-height: 35px;
+  padding: 2px 0 0 0px;
+}
+footer .addr__right .sns__list li i {
+  color: #aea498;
+}
+footer .addr__right .sns__list li i:hover {
+  color: #3d3a36;
+}
+footer .addr__right .fam-site {
+  width: 220px;
+  height: 35px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+}
+footer .addr__right .fam-site__drop {
+  line-height: 36px;
+  color: #555;
+}
+footer .addr__right .fam-site__drop span {
+  padding: 0 10px;
+}
+footer .addr__right .fam-site__drop i {
+  position: relative;
+  left: 102px;
+  font-size: 20px;
+}
+footer .addr__right .fam-site__down {
+  display: none;
+  max-height: 106px;
+  padding: 0 10px;
+  overflow-y: scroll;
 }
 
 /*# sourceMappingURL=style.css.map */
