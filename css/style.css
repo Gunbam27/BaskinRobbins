@@ -268,12 +268,14 @@ main .event .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
 }
 main .event .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 25px;
 }
 main .event .swiper-button-next {
   color: white;
