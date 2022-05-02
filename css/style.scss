@@ -171,11 +171,6 @@ main{
             left: 60%;
             transform: translateX(-60%);
             .bnimg{
-            // position: absolute;
-            // z-index: -1;
-            // top: 30px;
-            // left: 850px;
-            // transform: rotate(-40deg);
             display: block;
             margin: auto;
             transform: rotate(-40deg);
@@ -259,29 +254,30 @@ main{
         padding: 30px 0;
         text-align: center;
         background-color:#FF8D9A;
-        h2{text-indent: 999;}
-        img{
-            height:520px;
-            border-radius: 45px;
-        }
-        &-btn{
-            position:absolute;
-            top:50%;
-            width:50px;
-            height:50px;
-            font-size: 25px;
-            line-height: 22px;
-            border:3px solid #fff;
-            background: transparent;
-            color:white;
-            border-radius:50%;
-        }
-        &:nth-child(1){
-            left:10%;
-        }
-        &:nth-child(2){
-            right:10%;
-        }
+        .swiper {
+            max-width:1200px;
+            height: 100%;
+            &-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                & img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                }
+              }
+            &-button-next{color:white;}
+            &-button-prev{color:white;}
+            &-pagination-bullet-active{background:white;}
+          }
     }
     .store{
         max-width:1170px;

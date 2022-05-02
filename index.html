@@ -7,10 +7,18 @@
     <title>배스킨라빈스</title>
     <!-- style.scss -->
     <link rel="stylesheet" href="css/style.css"/>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.css"
+    />
+
     <!-- 제이쿼리 -->
     <script src="./src/jquery-3.6.0.js"></script>
     <!-- 메인JS -->
     <script defer src="./src/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- 배너JS -->
     <script defer src="./src/banner.js"></script>
     <!-- 폰트어썸 -->
@@ -118,9 +126,18 @@
             </div>
         </article>
         <article class="event">
-            <button type="button" class="event-btn"><i class="fas fa-chevron-left"></i></i></button>
-            <img src="./img/rollingbanner1.jpg" alt="인스타그램에 사진을 올려주세요!"/>
-            <button type="button" class="event-btn"><i class="fas fa-chevron-right"></i></i></button>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/rollingbanner1.jpg" alt="인스타그램에 사진을 올려주세요!"/></div>
+                    <div class="swiper-slide"><img src="./img/rollingbanner2.png" alt="인스타그램에 사진을 올려주세요!"/></div>
+                    <div class="swiper-slide"><img src="./img/rollingbanner3.png" alt="인스타그램에 사진을 올려주세요!"/></div>
+                    <div class="swiper-slide"><img src="./img/rollingbanner4.png" alt="인스타그램에 사진을 올려주세요!"/></div>
+                    <div class="swiper-slide"><img src="./img/rollingbanner5.png" alt="인스타그램에 사진을 올려주세요!"/></div>
+                </div>
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </article>
         <article class="store">
             <h2>BR STORE</h2><h2>HAPPY ORDERER & DELIVERY</h2>
