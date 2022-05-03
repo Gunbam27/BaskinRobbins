@@ -155,8 +155,14 @@ main .banner {
 main .banner__image {
   position: relative;
 }
+main .banner__image canvas {
+  border: none;
+  background: transparent;
+  outline: none;
+}
 main .banner__image #bigRound {
   position: absolute;
+  transition: all 0.4s ease-out;
   right: 0;
   z-index: -10;
   overflow: hidden;
@@ -177,10 +183,15 @@ main .banner__image .image {
   left: 60%;
   transform: translateX(-60%);
 }
-main .banner__image .image .bnimg {
+main .banner__image .image__roll {
+  display: flex;
+  width: 700px;
+  transition: all 0.4s ease-out;
+  overflow: hidden;
+}
+main .banner__image .image__roll .bnimg {
   display: block;
   margin: auto;
-  transform: rotate(-40deg);
 }
 main .banner__txt {
   position: relative;

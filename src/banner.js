@@ -5,9 +5,14 @@ const srctx = sr.getContext('2d');
 const tr = document.getElementById('twoRound');
 const trctx = tr.getContext('2d');
 const bnimg =document.querySelector('.bnimg')
-bigRound();
-smallRound();
-twoRound();
+let colornum = 0;
+window.addEventListener('load', () =>{
+    bigRound();
+    smallRound();
+    twoRound();
+
+})
+
 
 window.onresize=(function(){
     if(window.innerWidth<1440){
@@ -30,46 +35,51 @@ window.onresize=(function(){
 
 // 오른쪽 큰원
 function bigRound(){
-brctx.beginPath();
-brctx.arc(1100, 450, 700, 0, 2*Math.PI);
-brctx.fillStyle = '#FEEEDA';
-brctx.fill();
+    var color = ['#FEEEDA','#EB9B22','#643725','#5AE9C0','#EA6469']
+    if(colornum===5){colornum=0};
+    brctx.clearRect(0,0,br.width,br.height);
+    brctx.beginPath();
+    brctx.arc(1100, 450, 700, 0, 2*Math.PI);
+    brctx.fillStyle = color[colornum];
+    brctx.fill();
+    colornum+=1;
 }
-
 // 오른쪽 작은원
 function smallRound(){
-srctx.beginPath();
-srctx.arc(490, 430, 400, 0, 2*Math.PI);
-srctx.fillStyle = '#EE7F83';
-srctx.fill();
+    srctx.beginPath();
+    srctx.arc(490, 430, 400, 0, 2*Math.PI);
+    srctx.fillStyle = '#EE7F83';
+    srctx.fill();
 }
 // 왼쪽 위 작은원 & 아래작은원
 function twoRound(){
-// 왼쪽 위 작은원
-trctx.beginPath();
-trctx.arc(140,75, 70, 0, 2*Math.PI);
-trctx.fillStyle = '#FEEEDA';
-trctx.fill();
-// 왼쪽 아래 큰원
-trctx.beginPath();
-trctx.arc(100, 150, 100, 0, 2*Math.PI);
-trctx.fillStyle = '#FEEEDA';
-trctx.fill();
+    // 왼쪽 위 작은원
+    trctx.beginPath();
+    trctx.arc(140,75, 70, 0, 2*Math.PI);
+    trctx.fillStyle = '#FEEEDA';
+    trctx.fill();
+    // 왼쪽 아래 큰원
+    trctx.beginPath();
+    trctx.arc(100, 150, 100, 0, 2*Math.PI);
+    trctx.fillStyle = '#FEEEDA';
+    trctx.fill();
 }
 
-    
-
-
-
 $(()=>{
-    $(".navbar").find(".navbar__smenu").hover(function(){
-        $(".smenu").css({'display':'block'});
-        $(".navbar__bg").animate({'height':'300px'},300).css({'border-bottom':'1px solid #ccc'});
-        $(".smenu li").animate({'height':'50px'},300);
-    },
-        function(){
-            $(".smenu").css({'display':'none'});
-            $(".navbar__bg").animate({'height':'0px'},200).css({'border-bottom':'0px solid #ccc'});
-            $(".smenu li").animate({'height':'0px'},100);
-    })
-})
+    var $banner = $(".image").find("ul");
+    var $bannerWidth = $banner.children().outerWidth();
+    var $bannerLength = $banner.children().length;
+    console.log($bannerLength);
+    // 3초마다 함수 실행
+    rollingId = setInterval(function() { rollingStart(); bigRound()}, 5000);
+
+    function rollingStart() {
+        $banner.css("width", $bannerWidth + "px");
+        //배너의 좌측 위치를 옮겨 준다.
+        $banner.animate({left: - $bannerWidth + "px"},0, function() { //숫자는 롤링 진행되는 시간이다.
+            $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+            $(this).find("li:first").remove();
+            $(this).css("left", 0);
+        });
+    }
+}); 

@@ -7,6 +7,18 @@ const eventbg = document.querySelector('.event');
 
 
 $(()=>{
+    // 네비게이션바 호버시 드롭다운
+    $(".navbar").find(".navbar__smenu").hover(function(){
+      $(".smenu").css({'display':'block'});
+      $(".navbar__bg").animate({'height':'300px'},300).css({'border-bottom':'1px solid #ccc'});
+      $(".smenu li").animate({'height':'50px'},300);
+    },
+      function(){
+          $(".smenu").css({'display':'none'});
+          $(".navbar__bg").animate({'height':'0px'},200).css({'border-bottom':'0px solid #ccc'});
+          $(".smenu li").animate({'height':'0px'},100);
+    })
+
     // 패밀리사이트 드롭다운
     $('.fam-site__drop').click((e)=>{
         e.preventDefault();
@@ -25,6 +37,10 @@ $(()=>{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+      },
         on: {
             activeIndexChange: function () {
                 let pc = page[this.realIndex];

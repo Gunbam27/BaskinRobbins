@@ -102,7 +102,6 @@ header{max-width: 1920px;margin: auto;}
             top: 146px;
             left: 50%;
             width: 100%;
-            //max-width: 1170px;
             height: 0px;
             background: #ffffff;
             z-index: 10;
@@ -149,8 +148,10 @@ main{
         height: 800px;
         &__image{
             position: relative;
+        canvas{border:none;background: transparent;outline: none;}
         #bigRound{
             position: absolute;
+            transition: all 0.4s ease-out;
             right: 0;
             z-index: -10;
             overflow: hidden;
@@ -170,11 +171,16 @@ main{
             top: 0;
             left: 60%;
             transform: translateX(-60%);
-            .bnimg{
-            display: block;
-            margin: auto;
-            transform: rotate(-40deg);
-        }
+            &__roll{
+                display:flex;
+                width: 700px;
+                transition: all 0.4s ease-out;
+                overflow: hidden;
+                .bnimg{
+                display: block;
+                margin: auto;   
+                }
+            }
         }
         
         }
