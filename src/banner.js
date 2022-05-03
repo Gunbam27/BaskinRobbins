@@ -71,12 +71,12 @@ $(()=>{
     var $bannerLength = $banner.children().length;
     console.log($bannerLength);
     // 3초마다 함수 실행
-    rollingId = setInterval(function() { rollingStart(); bigRound()}, 5000);
+    rollingId = setInterval(function() { rollingStart();bigRound();}, 5000);
 
     function rollingStart() {
         $banner.css("width", $bannerWidth + "px");
         //배너의 좌측 위치를 옮겨 준다.
-        $banner.animate({left: - $bannerWidth + "px"},0, function() { //숫자는 롤링 진행되는 시간이다.
+        $banner.animate({left: + $bannerWidth + "px"},400, function() {
             $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
             $(this).find("li:first").remove();
             $(this).css("left", 0);

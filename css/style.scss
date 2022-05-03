@@ -173,6 +173,7 @@ main{
             transform: translateX(-60%);
             &__roll{
                 display:flex;
+                position: relative;
                 width: 700px;
                 transition: all 0.4s ease-out;
                 overflow: hidden;

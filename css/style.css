@@ -185,6 +185,7 @@ main .banner__image .image {
 }
 main .banner__image .image__roll {
   display: flex;
+  position: relative;
   width: 700px;
   transition: all 0.4s ease-out;
   overflow: hidden;
