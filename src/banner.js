@@ -6,6 +6,8 @@ const tr = document.getElementById('twoRound');
 const trctx = tr.getContext('2d');
 const bnimg =document.querySelector('.bnimg')
 let colornum = 0;
+let colornum_Tr =0;
+var color = ['#FEEEDA','#EB9B22','#643725','#5AE9C0','#EA6469']
 window.addEventListener('load', () =>{
     bigRound();
     smallRound();
@@ -33,9 +35,9 @@ window.onresize=(function(){
 }
 });
 
+
 // 오른쪽 큰원
 function bigRound(){
-    var color = ['#FEEEDA','#EB9B22','#643725','#5AE9C0','#EA6469']
     if(colornum===5){colornum=0};
     brctx.clearRect(0,0,br.width,br.height);
     brctx.beginPath();
@@ -47,22 +49,25 @@ function bigRound(){
 // 오른쪽 작은원
 function smallRound(){
     srctx.beginPath();
-    srctx.arc(490, 430, 400, 0, 2*Math.PI);
+    srctx.arc(480, 400, 430, 0, 2*Math.PI);
     srctx.fillStyle = '#EE7F83';
     srctx.fill();
 }
 // 왼쪽 위 작은원 & 아래작은원
 function twoRound(){
     // 왼쪽 위 작은원
+    if(colornum_Tr===5){colornum_Tr=0};
+    trctx.clearRect(0,0,tr.width,tr.height);
     trctx.beginPath();
     trctx.arc(140,75, 70, 0, 2*Math.PI);
-    trctx.fillStyle = '#FEEEDA';
-    trctx.fill();
+    // trctx.fillStyle = color[colornum];
+    // trctx.fill();
     // 왼쪽 아래 큰원
-    trctx.beginPath();
+    // trctx.beginPath();
     trctx.arc(100, 150, 100, 0, 2*Math.PI);
-    trctx.fillStyle = '#FEEEDA';
+    trctx.fillStyle = color[colornum_Tr];
     trctx.fill();
+    colornum_Tr+=1;
 }
 
 $(()=>{
@@ -71,7 +76,7 @@ $(()=>{
     var $bannerLength = $banner.children().length;
     console.log($bannerLength);
     // 3초마다 함수 실행
-    rollingId = setInterval(function() { rollingStart();bigRound();}, 5000);
+    rollingId = setInterval(function() { rollingStart();bigRound();twoRound();}, 5000);
 
     function rollingStart() {
         $banner.css("width", $bannerWidth + "px");

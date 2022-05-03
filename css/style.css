@@ -29,6 +29,7 @@ a {
 
 * {
   font-family: AppleSDGothicNeoM;
+  outline: 1px solid lime;
 }
 
 .title {
@@ -151,24 +152,52 @@ main {
 }
 main .banner {
   height: 800px;
+  overflow: hidden;
 }
-main .banner__image {
+main .banner__slide {
+  display: flex;
+}
+main .banner__slide .slide__cont {
   position: relative;
 }
-main .banner__image canvas {
-  border: none;
-  background: transparent;
-  outline: none;
+main .banner__slide .slide__cont .slide__txt {
+  position: relative;
+  padding: 300px 300px 0 300px;
+  z-index: 1;
+}
+main .banner__slide .slide__cont .slide__txt p {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 30px;
+}
+main .banner__slide .slide__cont .slide__pagenb {
+  top: 0px;
+  text-align: right;
+  padding: 20px 1580px 316px 0px;
+}
+main .banner__slide .slide__cont .slide__pagenb .page {
+  left: 0;
+  width: 320px;
+  height: 1px;
+  background-color: black;
+}
+main .banner__slide .slide__cont .bnimg {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 38%;
 }
 main .banner__image #bigRound {
   position: absolute;
   transition: all 0.4s ease-out;
+  top: 0;
   right: 0;
   z-index: -10;
   overflow: hidden;
 }
 main .banner__image #smallRound {
   position: absolute;
+  top: 0;
   right: 0;
   z-index: 1;
 }
@@ -176,44 +205,6 @@ main .banner__image #twoRound {
   position: absolute;
   left: 200px;
   top: 120px;
-}
-main .banner__image .image {
-  position: absolute;
-  top: 0;
-  left: 60%;
-  transform: translateX(-60%);
-}
-main .banner__image .image__roll {
-  display: flex;
-  position: relative;
-  width: 700px;
-  transition: all 0.4s ease-out;
-  overflow: hidden;
-}
-main .banner__image .image__roll .bnimg {
-  display: block;
-  margin: auto;
-}
-main .banner__txt {
-  position: relative;
-  top: 300px;
-  left: 300px;
-}
-main .banner__txt p {
-  margin-top: 30px;
-  font-size: 20px;
-  line-height: 30px;
-}
-main .banner__pagenb {
-  position: absolute;
-  top: 550px;
-  text-align: right;
-}
-main .banner__pagenb .page {
-  left: 0;
-  width: 320px;
-  height: 1px;
-  background-color: black;
 }
 main .menu {
   max-width: 1170px;
