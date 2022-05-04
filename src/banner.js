@@ -60,10 +60,7 @@ function twoRound(){
     trctx.clearRect(0,0,tr.width,tr.height);
     trctx.beginPath();
     trctx.arc(140,75, 70, 0, 2*Math.PI);
-    // trctx.fillStyle = color[colornum];
-    // trctx.fill();
     // 왼쪽 아래 큰원
-    // trctx.beginPath();
     trctx.arc(100, 150, 100, 0, 2*Math.PI);
     trctx.fillStyle = color[colornum_Tr];
     trctx.fill();
@@ -71,20 +68,16 @@ function twoRound(){
 }
 
 $(()=>{
-    var $banner = $(".image").find("ul");
-    var $bannerWidth = $banner.children().outerWidth();
-    var $bannerLength = $banner.children().length;
-    console.log($bannerLength);
+    var $banner = $(".banner__slide");
+    var $bannerWidth = $banner.width;
     // 3초마다 함수 실행
     rollingId = setInterval(function() { rollingStart();bigRound();twoRound();}, 5000);
-
     function rollingStart() {
-        $banner.css("width", $bannerWidth + "px");
-        //배너의 좌측 위치를 옮겨 준다.
-        $banner.animate({left: + $bannerWidth + "px"},400, function() {
-            $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
-            $(this).find("li:first").remove();
-            $(this).css("left", 0);
+        // $banner.css({left: "-100%"});
+        $banner.animate({left: "100%"},1500, function() {
+            $(this).append("<div class='slide__cont'>" + $(this).find("div:first").html()+ "</div>");
+            $(this).find("div:first").remove();
+            $(this).css({left: "0%"});
         });
     }
 }); 

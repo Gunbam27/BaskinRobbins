@@ -150,6 +150,8 @@ main{
         overflow: hidden;
         &__slide{
             display: flex;
+            position: relative;
+            // left: -0%;
             .slide__cont{
                 position: relative;
                 .slide__txt{

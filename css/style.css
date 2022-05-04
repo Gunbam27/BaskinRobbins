@@ -156,6 +156,7 @@ main .banner {
 }
 main .banner__slide {
   display: flex;
+  position: relative;
 }
 main .banner__slide .slide__cont {
   position: relative;
