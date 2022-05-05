@@ -7,13 +7,9 @@ const trctx = tr.getContext('2d');
 const bnimg =document.querySelector('.bnimg')
 let colornum = 0;
 let colornum_Tr =0;
-var color = ['#FEEEDA','#EB9B22','#643725','#5AE9C0','#EA6469']
-window.addEventListener('load', () =>{
-    bigRound();
-    smallRound();
-    twoRound();
+var color = ['#FEEEDA','#EB9B22','#643725','#5AE9C0','#EE7F83']
+var colorBg = ['#EE7F83','#FEEEDA','#EB9B22','#643725','#5AE9C0']
 
-})
 
 
 window.onresize=(function(){
@@ -67,17 +63,77 @@ function twoRound(){
     colornum_Tr+=1;
 }
 
-$(()=>{
-    var $banner = $(".banner__slide");
-    var $bannerWidth = $banner.width;
-    // 3초마다 함수 실행
-    rollingId = setInterval(function() { rollingStart();bigRound();twoRound();}, 5000);
-    function rollingStart() {
-        // $banner.css({left: "-100%"});
-        $banner.animate({left: "100%"},1500, function() {
-            $(this).append("<div class='slide__cont'>" + $(this).find("div:first").html()+ "</div>");
-            $(this).find("div:first").remove();
-            $(this).css({left: "0%"});
-        });
-    }
-}); 
+
+
+const slide =document.querySelector('.banner__slide');
+window.addEventListener('load', () =>{
+    bigRound();
+    smallRound();
+    twoRound();
+    // (() => {
+    //     ///////////////////////////////////////
+    //     // 대상: #slide li
+    //     let tg = slide.querySelectorAll('li');
+    //     for (let i = 0; i < tg.length; i++) {
+    //     tg[i].setAttribute('data-seq', i);
+    //     } //////////// for /////////////////
+    // })(); ////////////////////////////////////////
+
+    const goSlide = () => {
+
+        let sli = slide.querySelectorAll('li');
+
+      // (2) 이때 left -100%로 변경한다!(트랜지션없음!)
+      slide.style.left = '-100%';
+      slide.style.transition = 'none';
+
+      // (3) 이후 left값을 0으로 변경하며 애니메이션함
+      // 주의: 위의 설정코드와 분리를 위해 setTimeout으로
+      // 약간의 시차를 줌!
+      setTimeout(() => {
+        slide.appendChild(sli[0]);
+        slide.style.left = '0';
+        slide.style.transition = '.6s ease-out';
+      }, 10); /// 0.01초 시차! ////
+        };
+    const autoCall = () => {
+        // 인터발 자동호출!
+        autoI = setInterval(() => goSlide(), 3000);
+        // 지우기 위해 변수에 할당함!
+        };
+    autoCall();
+})
+
+
+
+
+// $(()=>{
+//     var $banner = $(".banner__slide");
+//     let funcs = [];
+
+//     for (var i = 0; i < $banner.children().length; i++) {
+//     funcs[i] = rollingStart(i);
+// }
+
+// for (var j = 0; j < $banner.children().length; j++) {
+//     funcs[j]();
+// }
+
+
+//     // console.log($bannerChild);
+//     // 3초마다 함수 실행
+//     rollingId = setInterval(function() { rollingStart();bigRound();twoRound();}, 5000);
+//     function rollingStart(i) {
+//         $('.banner').attr("class","banner slide02");
+//         $banner.animate({left: "100%"},1500, function() {
+//         // $(this).attr("class", "banner__slide slide02")
+//         $(this).append(`<div class='slide__cont slide0${i}>` + $(this).find("div:first").html()+ "</div>");
+//         // console.log($banner.find("div:first"));
+//         $(this).find("div:first").remove();
+//         $(this).css({left: "0%"});
+//     });
+// }
+// });
+
+
+

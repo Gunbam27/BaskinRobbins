@@ -150,6 +150,21 @@ main {
   max-width: 1920px;
   overflow: hidden;
 }
+main .slide01 {
+  background-color: #EE7F83;
+}
+main .slide02 {
+  background-color: #FEEEDA;
+}
+main .slide03 {
+  background-color: #EB9B22;
+}
+main .slide04 {
+  background-color: #643725;
+}
+main .slide05 {
+  background-color: #5AE9C0;
+}
 main .banner {
   height: 800px;
   overflow: hidden;
@@ -157,6 +172,7 @@ main .banner {
 main .banner__slide {
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 main .banner__slide .slide__cont {
   position: relative;
@@ -164,7 +180,7 @@ main .banner__slide .slide__cont {
 main .banner__slide .slide__cont .slide__txt {
   position: relative;
   padding: 300px 300px 0 300px;
-  z-index: 1;
+  z-index: 20;
 }
 main .banner__slide .slide__cont .slide__txt p {
   margin-top: 30px;
@@ -182,13 +198,13 @@ main .banner__slide .slide__cont .slide__pagenb .page {
   height: 1px;
   background-color: black;
 }
-main .banner__slide .slide__cont .bnimg {
+main .banner__image .bnimg {
   z-index: 1;
   position: absolute;
   top: 0;
   left: 38%;
 }
-main .banner__image #bigRound {
+main .banner__round #bigRound {
   position: absolute;
   transition: all 0.4s ease-out;
   top: 0;
@@ -196,13 +212,13 @@ main .banner__image #bigRound {
   z-index: -10;
   overflow: hidden;
 }
-main .banner__image #smallRound {
+main .banner__round #smallRound {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
 }
-main .banner__image #twoRound {
+main .banner__round #twoRound {
   position: absolute;
   left: 200px;
   top: 120px;
