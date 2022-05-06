@@ -195,11 +195,21 @@ main{
                 }
             }
         }
-        &__image{.bnimg{
-                    z-index: 1;
-                    position: absolute;
-                    top: 0;
-                    left: 38%;
+        &__image{
+            position: absolute;
+            top: 0px;
+            left: 740px;
+            
+            &-slide{
+                position:relative;
+                display:flex;
+                overflow: hidden;
+            }
+            .bnimg{
+                    // z-index: 1;
+                    // position: absolute;
+                    // top: 0;
+                    // left: 38%;
                 }
 
         }

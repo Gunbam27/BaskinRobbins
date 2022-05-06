@@ -65,42 +65,53 @@ function twoRound(){
 
 
 
-const slide =document.querySelector('.banner__slide');
+const text_slide =document.querySelector('.banner__slide');
+const image_slide =document.querySelector('.banner__image-slide');
 window.addEventListener('load', () =>{
     bigRound();
     smallRound();
     twoRound();
-    // (() => {
-    //     ///////////////////////////////////////
-    //     // 대상: #slide li
-    //     let tg = slide.querySelectorAll('li');
-    //     for (let i = 0; i < tg.length; i++) {
-    //     tg[i].setAttribute('data-seq', i);
-    //     } //////////// for /////////////////
-    // })(); ////////////////////////////////////////
 
-    const goSlide = () => {
+    // 메인배너 슬라이드 텍스트
+    const slideText = () => {
 
-        let sli = slide.querySelectorAll('li');
+        let sliTxt = text_slide.querySelectorAll('li');
 
       // (2) 이때 left -100%로 변경한다!(트랜지션없음!)
-      slide.style.left = '-100%';
-      slide.style.transition = 'none';
+      text_slide.style.left = '-100%';
+      text_slide.style.transition = 'none';
 
       // (3) 이후 left값을 0으로 변경하며 애니메이션함
       // 주의: 위의 설정코드와 분리를 위해 setTimeout으로
       // 약간의 시차를 줌!
       setTimeout(() => {
-        slide.appendChild(sli[0]);
-        slide.style.left = '0';
-        slide.style.transition = '.6s ease-out';
+        text_slide.appendChild(sliTxt[0]);
+        text_slide.style.left = '0';
+        text_slide.style.transition = '.6s ease-out';
       }, 10); /// 0.01초 시차! ////
         };
-    const autoCall = () => {
-        // 인터발 자동호출!
-        autoI = setInterval(() => goSlide(), 3000);
-        // 지우기 위해 변수에 할당함!
+    // 메인배너 슬라이드 이미지    
+    const slideImage = () => {
+
+        let sliImg = image_slide.querySelectorAll('li');
+
+        // (2) 이때 left -100%로 변경한다!(트랜지션없음!)
+        image_slide.style.left = '20%';
+        image_slide.style.transition = 'none';
+
+        // (3) 이후 left값을 0으로 변경하며 애니메이션함
+        // 주의: 위의 설정코드와 분리를 위해 setTimeout으로
+        // 약간의 시차를 줌!
+        setTimeout(() => {
+            image_slide.appendChild(sliImg[0]);
+            image_slide.style.left = '0';
+            image_slide.style.transition = '.8s ease-out';
+        }, 10); /// 0.01초 시차! ////
         };
+
+    const autoCall = () => {
+        autoI = setInterval(() => {slideText(),slideImage()}, 5000);
+    };
     autoCall();
 })
 

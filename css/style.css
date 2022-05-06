@@ -198,11 +198,15 @@ main .banner__slide .slide__cont .slide__pagenb .page {
   height: 1px;
   background-color: black;
 }
-main .banner__image .bnimg {
-  z-index: 1;
+main .banner__image {
   position: absolute;
-  top: 0;
-  left: 38%;
+  top: 0px;
+  left: 740px;
+}
+main .banner__image-slide {
+  position: relative;
+  display: flex;
+  overflow: hidden;
 }
 main .banner__round #bigRound {
   position: absolute;
