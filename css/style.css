@@ -150,24 +150,36 @@ main {
   max-width: 1920px;
   overflow: hidden;
 }
-main .slide01 {
-  background-color: #EE7F83;
-}
-main .slide02 {
-  background-color: #FEEEDA;
-}
-main .slide03 {
-  background-color: #EB9B22;
-}
-main .slide04 {
-  background-color: #643725;
-}
-main .slide05 {
-  background-color: #5AE9C0;
-}
 main .banner {
   height: 800px;
-  overflow: hidden;
+}
+main .banner__bg {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 800px;
+}
+main .banner__bg .bg {
+  position: relative;
+  left: 0;
+  width: 1920px;
+  z-index: -20;
+}
+main .banner__bg .slide01 {
+  background-color: #EE7F83;
+}
+main .banner__bg .slide02 {
+  background-color: #FEEEDA;
+}
+main .banner__bg .slide03 {
+  background-color: #EB9B22;
+}
+main .banner__bg .slide04 {
+  background-color: #643725;
+}
+main .banner__bg .slide05 {
+  background-color: #5AE9C0;
 }
 main .banner__slide {
   display: flex;
@@ -226,6 +238,16 @@ main .banner__round #twoRound {
   position: absolute;
   left: 200px;
   top: 120px;
+  z-index: 1;
+}
+main .banner__indicator {
+  position: absolute;
+  top: 5%;
+  right: 30%;
+  z-index: 20;
+}
+main .banner__indicator span {
+  font-size: 18px;
 }
 main .menu {
   max-width: 1170px;

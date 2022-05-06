@@ -7,6 +7,7 @@ const trctx = tr.getContext('2d');
 const bnimg =document.querySelector('.bnimg')
 let colornum = 0;
 let colornum_Tr =0;
+let colornum_Sr=0;
 var color = ['#FEEEDA','#EB9B22','#643725','#5AE9C0','#EE7F83']
 var colorBg = ['#EE7F83','#FEEEDA','#EB9B22','#643725','#5AE9C0']
 
@@ -44,10 +45,13 @@ function bigRound(){
 }
 // 오른쪽 작은원
 function smallRound(){
+    if(colornum_Sr===5){colornum_Sr=0};
+    srctx.clearRect(0,0,sr.width,sr.height);
     srctx.beginPath();
     srctx.arc(480, 400, 430, 0, 2*Math.PI);
-    srctx.fillStyle = '#EE7F83';
+    srctx.fillStyle = colorBg[colornum_Sr];
     srctx.fill();
+    colornum_Sr+=1;
 }
 // 왼쪽 위 작은원 & 아래작은원
 function twoRound(){
@@ -67,84 +71,51 @@ function twoRound(){
 
 const text_slide =document.querySelector('.banner__slide');
 const image_slide =document.querySelector('.banner__image-slide');
+const bg_slide =document.querySelector('.banner__bg');
 window.addEventListener('load', () =>{
     bigRound();
     smallRound();
     twoRound();
-
     // 메인배너 슬라이드 텍스트
     const slideText = () => {
-
         let sliTxt = text_slide.querySelectorAll('li');
-
-      // (2) 이때 left -100%로 변경한다!(트랜지션없음!)
-      text_slide.style.left = '-100%';
-      text_slide.style.transition = 'none';
-
-      // (3) 이후 left값을 0으로 변경하며 애니메이션함
-      // 주의: 위의 설정코드와 분리를 위해 setTimeout으로
-      // 약간의 시차를 줌!
-      setTimeout(() => {
-        text_slide.appendChild(sliTxt[0]);
-        text_slide.style.left = '0';
-        text_slide.style.transition = '.6s ease-out';
-      }, 10); /// 0.01초 시차! ////
+        text_slide.style.left = '-100%';
+        text_slide.style.transition = 'none';
+        setTimeout(() => {
+            text_slide.appendChild(sliTxt[0]);
+            text_slide.style.left = '0';
+            text_slide.style.transition = '.6s ease-out';
+        }, 10); /// 0.01초 시차! ////
         };
     // 메인배너 슬라이드 이미지    
     const slideImage = () => {
-
         let sliImg = image_slide.querySelectorAll('li');
-
-        // (2) 이때 left -100%로 변경한다!(트랜지션없음!)
         image_slide.style.left = '20%';
         image_slide.style.transition = 'none';
-
-        // (3) 이후 left값을 0으로 변경하며 애니메이션함
-        // 주의: 위의 설정코드와 분리를 위해 setTimeout으로
-        // 약간의 시차를 줌!
         setTimeout(() => {
-            image_slide.appendChild(sliImg[0]);
             image_slide.style.left = '0';
             image_slide.style.transition = '.8s ease-out';
+            image_slide.appendChild(sliImg[0]);
         }, 10); /// 0.01초 시차! ////
         };
 
+    const slideBg = () => {
+        let sliBg = bg_slide.querySelectorAll('.bg');
+        console.log(sliBg);
+        bg_slide.style.left = '-100%';
+        bg_slide.style.transition = 'none';
+        setTimeout(() => {
+            bg_slide.appendChild(sliBg[0]);
+            bg_slide.style.left = '0%';
+            bg_slide.style.transition = '1s ease-out';
+            
+        }, 10); 
+        }
+
     const autoCall = () => {
-        autoI = setInterval(() => {slideText(),slideImage()}, 5000);
+        autoI = setInterval(() => {slideText(),slideImage(),bigRound(),smallRound(),twoRound(),slideBg()}, 5000);
     };
     autoCall();
 })
-
-
-
-
-// $(()=>{
-//     var $banner = $(".banner__slide");
-//     let funcs = [];
-
-//     for (var i = 0; i < $banner.children().length; i++) {
-//     funcs[i] = rollingStart(i);
-// }
-
-// for (var j = 0; j < $banner.children().length; j++) {
-//     funcs[j]();
-// }
-
-
-//     // console.log($bannerChild);
-//     // 3초마다 함수 실행
-//     rollingId = setInterval(function() { rollingStart();bigRound();twoRound();}, 5000);
-//     function rollingStart(i) {
-//         $('.banner').attr("class","banner slide02");
-//         $banner.animate({left: "100%"},1500, function() {
-//         // $(this).attr("class", "banner__slide slide02")
-//         $(this).append(`<div class='slide__cont slide0${i}>` + $(this).find("div:first").html()+ "</div>");
-//         // console.log($banner.find("div:first"));
-//         $(this).find("div:first").remove();
-//         $(this).css({left: "0%"});
-//     });
-// }
-// });
-
 
 

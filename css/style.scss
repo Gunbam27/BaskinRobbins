@@ -141,34 +141,47 @@ header{max-width: 1920px;margin: auto;}
     }
 }
 main{
-    .slide01{
-        background-color: #EE7F83;
-    }
-    .slide02{
-        background-color: #FEEEDA;
-    }
-    .slide03{
-        background-color: #EB9B22;
-    }
-    .slide04{
-        background-color: #643725;
-    }
-    .slide05{
-        background-color: #5AE9C0;
-    }
+    
     position:relative;
     margin: auto;
     max-width: 1920px;
     overflow: hidden;
     .banner{
         height: 800px;
-        overflow: hidden;
+        // overflow: hidden;
+        &__bg{
+            position: absolute;
+            display:flex;
+            top: 0;
+            left: 0;
+            // width: 100%;
+            height: 800px;
+            .bg{
+                position: relative;
+                left:0;
+                width:1920px;
+                z-index: -20;
+            }
+            .slide01{
+                background-color: #EE7F83;
+            }
+            .slide02{
+                background-color: #FEEEDA;
+            }
+            .slide03{
+                background-color: #EB9B22;
+            }
+            .slide04{
+                background-color: #643725;
+            }
+            .slide05{
+                background-color: #5AE9C0;
+            }
+        }
         &__slide{
             display: flex;
             position: relative;
             overflow: hidden;
-            // left: 0%;
-            // transition: all 0.8s ease-out;
             .slide__cont{
                 position: relative;
                 .slide__txt{
@@ -206,11 +219,8 @@ main{
                 overflow: hidden;
             }
             .bnimg{
-                    // z-index: 1;
-                    // position: absolute;
-                    // top: 0;
-                    // left: 38%;
-                }
+
+            }
 
         }
         &__round{
@@ -232,6 +242,16 @@ main{
                 position: absolute;
                 left:200px;
                 top:120px;
+                z-index: 1;
+            }
+        }
+        &__indicator{
+            position: absolute;
+            top:5%;
+            right:30%;
+            z-index: 20;
+            span{
+                font-size:18px;
             }
         }
     }
