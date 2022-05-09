@@ -13,21 +13,20 @@ const bnimg =document.querySelector('.bnimg')
 let colornum = 0;
 let colornum_Tr =0;
 let colornum_Sr=0;
-let color_Indi =1;
+let color_Indi =0;
 var color = ['#FEEEDA','#EB9B22','#643725','#5AE9C0','#EE7F83']
 var colorBg = ['#EE7F83','#FEEEDA','#EB9B22','#643725','#5AE9C0']
 
-const fontColor = document.querySelectorAll('.banner__indicator span');
-console.log(fontColor);
-
-
+const indiSpan = document.querySelectorAll('.banner__indicator span');
 
 
 
 window.addEventListener('load', (e) =>{
+    indiColor();
     bigRound();
     smallRound();
     twoRound();
+    
     // 메인배너 슬라이드 텍스트
     const slideText = () => {
         let sliTxt = text_slide.querySelectorAll('li');
@@ -53,7 +52,6 @@ window.addEventListener('load', (e) =>{
 
     const slideBg = () => {
         let sliBg = bg_slide.querySelectorAll('.bg');
-        console.log(sliBg);
         bg_slide.style.left = '-100%';
         bg_slide.style.transition = 'none';
         setTimeout(() => {
@@ -104,12 +102,51 @@ function twoRound(){
     trctx.fill();
     colornum_Tr+=1;
 }
-// 인디케이터 제목 색
+const count = document.getElementsByClassName("count-down");
+
+let funcs = [];
+
+// 인디케이터 제목 색 바뀌는 기능
 function indiColor(){
     if(color_Indi===5){color_Indi=0};
-    fontColor[color_Indi].style.color = color[color_Indi];
+    indiSpan[color_Indi].classList.add('active');
     setTimeout(() => {
-        fontColor[color_Indi-1].style.color = '#666';
-    }, 4900); 
+        indiSpan[color_Indi-1].classList.remove('active');
+    }, 4900);
     color_Indi+=1;
+    
 }
+// 인디케이터 불렛 색 바뀌는 기능
+let bul =0;
+let indi_ul = 0;
+function updateBullet(){
+    if(bul>3){bul=0;return;};
+    let bullet = count[indi_ul].querySelectorAll('li');
+    bullet[bul].classList.add('active');
+    setTimeout(() => {
+        for(let j=0;j<bullet.length;j++){
+        bullet[j].classList.remove('active');}
+    }, 3900);
+    bul += 1;
+}
+setInterval(()=>{
+    if(indi_ul===4){indi_ul=0;return;}
+    indi_ul+=1;
+
+        },5000)
+setInterval(()=>{
+        updateBullet();
+        },1000)
+
+
+// // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+// // funcs=[Modal(0),[Modal(1),[Modal(2).....[Modal(8)]
+// for (var i = 0; i < count.length; i++) {
+//     funcs[i] = updateBullet(i);
+//   }
+  
+//   // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+//   // funcs[0](); funcs[1](); funcs[2]();.....funcs[8]();
+//   for (var j = 0; j < count.length; j++) {
+//     funcs[j]();
+//   }
