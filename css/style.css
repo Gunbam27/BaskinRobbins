@@ -29,7 +29,6 @@ a {
 
 * {
   font-family: AppleSDGothicNeoM;
-  outline: 1px solid lime;
 }
 
 .title {
@@ -111,7 +110,7 @@ header {
   width: 100%;
   height: 0px;
   background: #ffffff;
-  z-index: 10;
+  z-index: 20;
   transform: translateX(-50%);
 }
 .header .navbar > ul {
@@ -202,7 +201,7 @@ main .banner__slide .slide__cont .slide__txt p {
 main .banner__slide .slide__cont .slide__pagenb {
   top: 0px;
   text-align: right;
-  padding: 20px 1580px 316px 0px;
+  padding: 20px 1580px 295px 0px;
 }
 main .banner__slide .slide__cont .slide__pagenb .page {
   left: 0;
@@ -241,13 +240,114 @@ main .banner__round #twoRound {
   z-index: 1;
 }
 main .banner__indicator {
+  width: 782px;
+  height: 782px;
   position: absolute;
-  top: 5%;
-  right: 30%;
-  z-index: 20;
+  top: 3%;
+  right: -9%;
+  z-index: 10;
 }
 main .banner__indicator span {
-  font-size: 18px;
+  position: relative;
+  font-size: 20px;
+}
+main .banner__indicator span i {
+  font-size: 12px;
+}
+main .banner__indicator span:nth-of-type(1) {
+  left: 135px;
+  top: 25px;
+}
+main .banner__indicator span:nth-of-type(2) {
+  left: 60px;
+  top: 115px;
+}
+main .banner__indicator span:nth-of-type(3) {
+  left: 31px;
+  top: 205px;
+}
+main .banner__indicator span:nth-of-type(4) {
+  left: 60px;
+  top: 295px;
+}
+main .banner__indicator span:nth-of-type(5) {
+  left: 135px;
+  top: 385px;
+}
+main .banner__indicator ul {
+  position: relative;
+}
+main .banner__indicator ul li {
+  position: relative;
+  width: 3px;
+  height: 3px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  background: black;
+}
+main .banner__indicator ul:nth-of-type(1) li:nth-child(1) {
+  left: 120px;
+  top: 43px;
+}
+main .banner__indicator ul:nth-of-type(1) li:nth-child(2) {
+  left: 105px;
+  top: 61px;
+}
+main .banner__indicator ul:nth-of-type(1) li:nth-child(3) {
+  left: 90px;
+  top: 79px;
+}
+main .banner__indicator ul:nth-of-type(1) li:nth-child(4) {
+  left: 75px;
+  top: 97px;
+}
+main .banner__indicator ul:nth-of-type(2) li:nth-child(1) {
+  left: 46px;
+  top: 133px;
+}
+main .banner__indicator ul:nth-of-type(2) li:nth-child(2) {
+  left: 41px;
+  top: 151px;
+}
+main .banner__indicator ul:nth-of-type(2) li:nth-child(3) {
+  left: 36px;
+  top: 169px;
+}
+main .banner__indicator ul:nth-of-type(2) li:nth-child(4) {
+  left: 31px;
+  top: 187px;
+}
+main .banner__indicator ul:nth-of-type(3) li:nth-child(1) {
+  left: 31px;
+  top: 223px;
+}
+main .banner__indicator ul:nth-of-type(3) li:nth-child(2) {
+  left: 36px;
+  top: 241px;
+}
+main .banner__indicator ul:nth-of-type(3) li:nth-child(3) {
+  left: 41px;
+  top: 259px;
+}
+main .banner__indicator ul:nth-of-type(3) li:nth-child(4) {
+  left: 46px;
+  top: 277px;
+}
+main .banner__indicator ul:nth-of-type(4) li:nth-child(1) {
+  left: 75px;
+  top: 313px;
+}
+main .banner__indicator ul:nth-of-type(4) li:nth-child(2) {
+  left: 90px;
+  top: 331px;
+}
+main .banner__indicator ul:nth-of-type(4) li:nth-child(3) {
+  left: 105px;
+  top: 349px;
+}
+main .banner__indicator ul:nth-of-type(4) li:nth-child(4) {
+  left: 120px;
+  top: 367px;
 }
 main .menu {
   max-width: 1170px;
