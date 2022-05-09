@@ -240,11 +240,12 @@ main .banner__round #twoRound {
   z-index: 1;
 }
 main .banner__indicator {
-  width: 782px;
-  height: 782px;
   position: absolute;
   top: 3%;
   right: -9%;
+  width: 782px;
+  height: 800px;
+  color: #666;
   z-index: 10;
 }
 main .banner__indicator span {
@@ -283,7 +284,7 @@ main .banner__indicator ul li {
   height: 3px;
   text-indent: -9999px;
   border-radius: 50%;
-  background: black;
+  background-color: #666;
 }
 main .banner__indicator ul:nth-of-type(1) li:nth-child(1) {
   left: 120px;
