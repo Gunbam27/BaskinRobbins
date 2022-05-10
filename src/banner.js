@@ -23,11 +23,11 @@ var colorBg = ['#EE7F83','#FEEEDA','#EB9B22','#643725','#5AE9C0']
 
 
 window.addEventListener('load', (e) =>{
-    indiColor();
+    sr_slide.style.transition = 'all 0s';
     bigRound();
     smallRound();
     twoRound();
-    
+    indiColor();
     // 메인배너 슬라이드 텍스트
     const slideText = () => {
         let sliTxt = text_slide.querySelectorAll('li');

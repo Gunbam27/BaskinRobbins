@@ -156,51 +156,9 @@ header{max-width: 1920px;margin: auto;}
                 }
             }
         }
-        // &__bg{
-        //     position: absolute;
-        //     top: 146px;
-        //     left: 50%;
-        //     width: 100%;
-        //     height: 0px;
-        //     background: #ffffff;
-        //     z-index: 20;
-        //     transform: translateX(-50%);
-        // }
-        // > ul{
-        //     z-index: 20;
-        //     display:flex;
-        //     justify-content: center;
-        //     text-align: center;
-        //     .navbar__smenu{
-        //         position: relative;
-        //         width:160px;
-        //         height:61px;
-        //         // transition: all 0.4s ease-out;
-        //         >a{
-        //             font-size: 18px;
-        //             font-family: $bold;
-        //         }
-        //         ul li a{
-        //             font-family: $light;
-        //             &:hover{
-        //                 border-bottom: 1px solid #fc60aa;
-        //             }
-        //         }
-        //         .smenu{
-        //         position: absolute;
-        //         top: 62px;
-        //         display:none;
-        //         width: 160px;
-        //         z-index: 20;
-        //         // transition: all 0.4s ease-out;
-        //         }
-        //     }
-        // }
-        
     }
 }
 main{
-    
     position:relative;
     margin: auto;
     max-width: 1920px;
@@ -270,11 +228,13 @@ main{
             position: absolute;
             top: 0px;
             left: 740px;
-            
+            overflow: hidden;
             &-slide{
                 position:relative;
                 display:flex;
                 overflow: hidden;
+                width:700px;
+                li{width:700px;height:700px;}
             }
         }
         &__round{
@@ -285,12 +245,6 @@ main{
                 right: 0;
                 z-index: -10;
                 overflow: hidden;
-            }
-            #smallRound{
-                position: absolute;
-                top:0;
-                right: 0;
-                z-index: 1;
             }
             #twoRound{
                 position: absolute;

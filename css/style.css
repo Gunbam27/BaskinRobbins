@@ -229,11 +229,17 @@ main .banner__image {
   position: absolute;
   top: 0px;
   left: 740px;
+  overflow: hidden;
 }
 main .banner__image-slide {
   position: relative;
   display: flex;
   overflow: hidden;
+  width: 700px;
+}
+main .banner__image-slide li {
+  width: 700px;
+  height: 700px;
 }
 main .banner__round #bigRound {
   position: absolute;
@@ -242,12 +248,6 @@ main .banner__round #bigRound {
   right: 0;
   z-index: -10;
   overflow: hidden;
-}
-main .banner__round #smallRound {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
 }
 main .banner__round #twoRound {
   position: absolute;
