@@ -239,6 +239,39 @@ main .banner__round #twoRound {
   top: 120px;
   z-index: 1;
 }
+main .banner__smallRound {
+  position: absolute;
+  display: flex;
+  top: -45px;
+  right: -230px;
+  width: 900px;
+  height: 844px;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 1;
+}
+main .banner__smallRound .bg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  z-index: -20;
+}
+main .banner__smallRound .slide01 {
+  background-color: #EE7F83;
+}
+main .banner__smallRound .slide02 {
+  background-color: #FEEEDA;
+}
+main .banner__smallRound .slide03 {
+  background-color: #EB9B22;
+}
+main .banner__smallRound .slide04 {
+  background-color: #643725;
+}
+main .banner__smallRound .slide05 {
+  background-color: #5AE9C0;
+}
 main .banner__indicator {
   position: absolute;
   top: 3%;

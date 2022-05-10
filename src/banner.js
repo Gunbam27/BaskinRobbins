@@ -2,14 +2,16 @@
 const text_slide =document.querySelector('.banner__slide');
 const image_slide =document.querySelector('.banner__image-slide');
 const bg_slide =document.querySelector('.banner__bg');
+const sr_slide = document.querySelector('.banner__smallRound');
 // Canvas
 const br = document.getElementById('bigRound');
 const brctx = br.getContext('2d');
-const sr = document.getElementById('smallRound');
-const srctx = sr.getContext('2d');
+// const sr = document.getElementById('smallRound');
+// const srctx = sr.getContext('2d');
 const tr = document.getElementById('twoRound');
 const trctx = tr.getContext('2d');
 const bnimg =document.querySelector('.bnimg')
+
 let colornum = 0;
 let colornum_Tr =0;
 let colornum_Sr=0;
@@ -58,7 +60,6 @@ window.addEventListener('load', (e) =>{
             bg_slide.appendChild(sliBg[0]);
             bg_slide.style.left = '0%';
             bg_slide.style.transition = '1s ease-out';
-            
         }, 10); 
         }
 
@@ -82,12 +83,18 @@ function bigRound(){
 // 오른쪽 작은원
 function smallRound(){
     if(colornum_Sr===5){colornum_Sr=0};
-    srctx.clearRect(0,0,sr.width,sr.height);
-    srctx.beginPath();
-    srctx.arc(480, 400, 430, 0, 2*Math.PI);
-    srctx.fillStyle = colorBg[colornum_Sr];
-    srctx.fill();
+    sr_slide.style.backgroundColor=colorBg[colornum_Sr]
+    sr_slide.style.transition = 'all 1s ease-out';
     colornum_Sr+=1;
+    
+        // let slisr = sr_slide.querySelectorAll('.bg');
+        // sr_slide.style.right = '-100%';
+        // sr_slide.style.transition = 'none';
+        // setTimeout(() => {
+        //     sr_slide.appendChild(slisr[0]);
+        //     sr_slide.style.right = '-230px';
+        //     sr_slide.style.transition = '1s ease-out';
+        // }, 10); 
 }
 // 왼쪽 위 작은원 & 아래작은원
 function twoRound(){
