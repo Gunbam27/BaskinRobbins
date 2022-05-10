@@ -6,20 +6,19 @@ const sr_slide = document.querySelector('.banner__smallRound');
 // Canvas
 const br = document.getElementById('bigRound');
 const brctx = br.getContext('2d');
-// const sr = document.getElementById('smallRound');
-// const srctx = sr.getContext('2d');
 const tr = document.getElementById('twoRound');
 const trctx = tr.getContext('2d');
-const bnimg =document.querySelector('.bnimg')
-
+// Indicator
+const count = document.getElementsByClassName("count-down");
+const indiSpan = document.querySelectorAll('.banner__indicator span');
+// Count
+let colornum_Sr = 0;
 let colornum = 0;
 let colornum_Tr =0;
-let colornum_Sr=0;
 let color_Indi =0;
+// Color Array
 var color = ['#FEEEDA','#EB9B22','#643725','#5AE9C0','#EE7F83']
 var colorBg = ['#EE7F83','#FEEEDA','#EB9B22','#643725','#5AE9C0']
-
-const indiSpan = document.querySelectorAll('.banner__indicator span');
 
 
 
@@ -81,20 +80,12 @@ function bigRound(){
     colornum+=1;
 }
 // 오른쪽 작은원
+
 function smallRound(){
     if(colornum_Sr===5){colornum_Sr=0};
     sr_slide.style.backgroundColor=colorBg[colornum_Sr]
     sr_slide.style.transition = 'all 1s ease-out';
     colornum_Sr+=1;
-    
-        // let slisr = sr_slide.querySelectorAll('.bg');
-        // sr_slide.style.right = '-100%';
-        // sr_slide.style.transition = 'none';
-        // setTimeout(() => {
-        //     sr_slide.appendChild(slisr[0]);
-        //     sr_slide.style.right = '-230px';
-        //     sr_slide.style.transition = '1s ease-out';
-        // }, 10); 
 }
 // 왼쪽 위 작은원 & 아래작은원
 function twoRound(){
@@ -109,9 +100,7 @@ function twoRound(){
     trctx.fill();
     colornum_Tr+=1;
 }
-const count = document.getElementsByClassName("count-down");
 
-let funcs = [];
 
 // 인디케이터 제목 색 바뀌는 기능
 function indiColor(){
@@ -121,7 +110,6 @@ function indiColor(){
         indiSpan[color_Indi-1].classList.remove('active');
     }, 4900);
     color_Indi+=1;
-    
 }
 // 인디케이터 불렛 색 바뀌는 기능
 let bul =0;
@@ -131,8 +119,7 @@ function updateBullet(){
     let bullet = count[indi_ul].querySelectorAll('li');
     bullet[bul].classList.add('active');
     setTimeout(() => {
-        for(let j=0;j<bullet.length;j++){
-        bullet[j].classList.remove('active');}
+        for (let x of bullet) x.classList.remove('active');
     }, 3900);
     bul += 1;
 }
@@ -146,14 +133,3 @@ setInterval(()=>{
         },1000)
 
 
-// // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
-// // funcs=[Modal(0),[Modal(1),[Modal(2).....[Modal(8)]
-// for (var i = 0; i < count.length; i++) {
-//     funcs[i] = updateBullet(i);
-//   }
-  
-//   // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
-//   // funcs[0](); funcs[1](); funcs[2]();.....funcs[8]();
-//   for (var j = 0; j < count.length; j++) {
-//     funcs[j]();
-//   }

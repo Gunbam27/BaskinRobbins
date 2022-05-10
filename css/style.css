@@ -103,44 +103,60 @@ header {
   line-height: 80px;
   border-bottom: 1px solid #ccc;
 }
-.header .navbar__bg {
-  position: absolute;
-  top: 146px;
-  left: 50%;
-  width: 100%;
-  height: 0px;
-  background: #ffffff;
-  z-index: 20;
-  transform: translateX(-50%);
+.header .navbar__dropdown:hover .dropdown__content {
+  display: block;
 }
-.header .navbar > ul {
+.header .navbar__dropdown ul {
   display: flex;
   justify-content: center;
-  text-align: center;
 }
-.header .navbar > ul .navbar__smenu {
+.header .navbar__dropdown ul .navbar__smenu {
   position: relative;
   width: 160px;
   height: 61px;
-  transition: all 0.4s ease-out;
+  text-align: center;
 }
-.header .navbar > ul .navbar__smenu > a {
+.header .navbar__dropdown ul .navbar__smenu a {
   font-size: 18px;
   font-family: "AppleSDGothicNeoEB";
 }
-.header .navbar > ul .navbar__smenu ul li a {
+.header .navbar__dropdown .dropdown__content {
+  display: none;
+  position: absolute;
+  top: 146px;
+  left: 0;
+  max-width: 1920px;
+  height: 350px;
+  padding: 0 367px;
+  z-index: 30;
+  background-color: #fff;
+}
+.header .navbar__dropdown .dropdown__content-smenu {
+  position: relative;
+  justify-content: center;
+  align-items: baseline;
+  display: flex;
+  width: 1170px;
+  height: 350px;
+}
+.header .navbar__dropdown .dropdown__content-smenu .smenu {
+  position: relative;
+  top: 31px;
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  text-align: center;
+  height: 61px;
+  z-index: 20;
+}
+.header .navbar__dropdown .dropdown__content-smenu .smenu li {
+  height: 60px;
+}
+.header .navbar__dropdown .dropdown__content-smenu .smenu li a {
   font-family: "AppleSDGothicNeoL";
 }
-.header .navbar > ul .navbar__smenu ul li a:hover {
+.header .navbar__dropdown .dropdown__content-smenu .smenu li a:hover {
   border-bottom: 1px solid #fc60aa;
-}
-.header .navbar > ul .navbar__smenu .smenu {
-  position: absolute;
-  top: 62px;
-  display: none;
-  width: 160px;
-  z-index: 20;
-  transition: all 0.4s ease-out;
 }
 
 main {
@@ -242,8 +258,10 @@ main .banner__round #twoRound {
 main .banner__smallRound {
   position: absolute;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   top: -45px;
-  right: -230px;
+  left: 1200px;
   width: 900px;
   height: 844px;
   overflow: hidden;
@@ -254,7 +272,8 @@ main .banner__smallRound .bg {
   position: relative;
   top: 0;
   left: 0;
-  width: 1920px;
+  width: 900px;
+  height: 844px;
   z-index: -20;
 }
 main .banner__smallRound .slide01 {

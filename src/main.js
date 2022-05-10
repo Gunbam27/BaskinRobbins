@@ -5,19 +5,25 @@ const btns = document.querySelector('.swiper-button-next');
 const eventbg = document.querySelector('.event');
 
 
-
+window.addEventListener('load',()=>{
+  
+})
 $(()=>{
+//   $(".navbar").find(".navbar__smenu").on( {
+//     'mouseenter':function() { $(".smenu").css({'display':'block'}); },
+//     'mouseleave':function() {  $(".smenu").css({'display':'none'}); }
+//  });
     // 네비게이션바 호버시 드롭다운
-    $(".navbar").find(".navbar__smenu").hover(function(){
-      $(".smenu").css({'display':'block'});
-      $(".navbar__bg").animate({'height':'300px'},300).css({'border-bottom':'1px solid #ccc'});
-      $(".smenu li").animate({'height':'50px'},300);
-    },
-      function(){
-          $(".smenu").css({'display':'none'});
-          $(".navbar__bg").animate({'height':'0px'},200).css({'border-bottom':'0px solid #ccc'});
-          $(".smenu li").animate({'height':'0px'},100);
-    })
+    // $(".navbar").find(".navbar__smenu").hover(function(){
+    //   $("navbar__bg").css({'display':'block'});
+    //   $(".navbar__bg").animate({'height':'300px'},100).css({'border-bottom':'1px solid #ccc'});
+    //   // $(".smenu li").animate({'height':'50px'},100);
+    // },
+    //   function(){
+    //       $(".navbar__bg").css({'display':'none'});
+    //       $(".navbar__bg").animate({'height':'0px'},100).css({'border-bottom':'0px solid #ccc'});
+    //       // $(".smenu li").animate({'height':'0px'},100);
+    // })
 
     // 패밀리사이트 드롭다운
     $('.fam-site__drop').click((e)=>{
