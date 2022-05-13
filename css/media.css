@@ -1,0 +1,123 @@
+@charset 'utf-8';
+@media screen and (max-width: 768px) {
+    /* header 네비게이션 드롭다운 메뉴 */
+    .header .navbar__dropdown .dropdown__content {
+        top: 144px;
+        padding: 0 0px;
+    }
+    .header .navbar__dropdown .dropdown__content-smenu {
+        justify-content: flex-start;
+    }
+    .header .navbar__dropdown .dropdown__content-smenu {
+        width: 768px;
+    }
+    /* main 롤링배너 */
+    main .banner__slide .slide__cont .slide__txt {
+        padding: 537px 300px 0 46px;
+    }
+    main .banner__slide .slide__cont .slide__pagenb {
+        top: 0px;
+        text-align: right;
+        padding: 31px 768px 0px 0px;
+    }
+    main .banner__slide .slide__cont .slide__pagenb .page {
+        width: 232px;
+    }
+    main .banner__image {
+        position: absolute;
+        top: -35px;
+        left: 122px;
+        overflow: hidden;
+    }
+    main .banner__round #bigRound {
+        right: -590px;
+    }
+    main .banner__round #twoRound {
+        left: -92px;
+        top: 414px;
+    }
+    main .banner__smallRound {
+        top: -20px;
+        left: 462px;
+    }
+    main .banner__indicator {
+        position: absolute;
+        top: 110px;
+        right: -520px;
+        width: 782px;
+        height: 800px;
+        z-index: 10;
+    }
+    /* main 스토어 이미지 */
+    main .store__image img {
+        width: 384px;
+    }
+    /* main 인스타 그리드 */
+    main .insta__grid {
+        padding: 50px 24px;
+        grid-template-columns: repeat(3, 238px);
+        grid-template-rows: repeat(3, 238px);
+    }
+    /* footer 주소 */
+    footer .addr {
+        padding: 0px 30px;
+    }
+}
+@media screen and (max-width: 412px) {
+    .header__logobox .logo {
+        top: 0px;
+    }
+    .header__logobox--ham {
+        display: block;
+        text-align: right;
+    }
+    .header__logobox--ham button {
+        border:none;
+        background:transparent;
+        font-size: 28px;
+        color:#30010d;
+    }
+    .header__logobox--ham a{
+        font-size: 27px;
+        color:#30010d;
+    }
+    .header__logobox h1 a {
+        background: url(../img/logo2.png) no-repeat center center/contain;
+    }
+    .header__logobox--left-box {
+        display:none;
+    }
+    .header__logobox--right-box {
+        display:none;
+    }
+    .header .navbar {
+        display:none;
+        position: absolute;
+        width:100%;
+        height: 61px;
+        line-height: 30px;
+        background-color:#fff;
+        z-index: 30;
+    }
+
+    .header .navbar__dropdown .dropdown__content-smenu .smenu {
+        position: relative;
+        top: -60px;
+        width: 82px;
+        z-index: 20;
+    }
+    .header .navbar__dropdown .dropdown__content {
+        top: 60px;
+        padding: 65px 0px 0px 0px;
+    }
+    .header .navbar__dropdown:hover .dropdown__content {
+        height: 375px;
+    }
+    .header .navbar__dropdown .dropdown__content-smenu .smenu li{
+        padding:20px 0;
+    }
+    /* footer */
+    footer {
+        overflow: hidden;
+    }
+}

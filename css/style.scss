@@ -49,6 +49,9 @@ header{max-width: 1920px;margin: auto;}
             position:relative;
             top:10px;
         }
+        &--ham{
+            display:none;
+        }
         &--left-box{
             position: absolute;
             top: 31px;
@@ -290,13 +293,13 @@ main{
             }
         }
         &__indicator{
-            position: absolute;
-            top:3%;
-            right:-9%;
-            width:782px;
-            height:800px;
-            
+            position: relative;
+            top: -712px;
+            right: -1290px;
+            width: 782px;
+            height: 800px;
             z-index: 10;
+            
                 span{
                 color:#666;
                 position: relative;
