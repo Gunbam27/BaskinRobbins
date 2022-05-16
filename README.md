@@ -8,7 +8,7 @@
 
 Figma를 사용하여 페이지의 구상 및 디자인 하였습니다.
 
-![디자인.PNG](BaskinRobbins/배스킨라빈스 설계/디자인.png)
+![디자인.PNG](BaskinRobbins/배스킨라빈스 설계/디자인.PNG)
 
 HTML, CSS, JavaScript,Scss를 이용하여 제작하였습니다.
 
