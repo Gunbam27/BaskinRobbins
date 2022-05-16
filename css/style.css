@@ -169,6 +169,8 @@ main {
   overflow: hidden;
 }
 main .banner {
+  position: relative;
+  overflow: hidden;
   height: 800px;
 }
 main .banner__bg {
@@ -725,6 +727,7 @@ footer .addr__right .fam-site__down {
   max-height: 106px;
   padding: 0 10px;
   overflow-y: scroll;
+  background-color: #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,14 +12,7 @@ $(()=>{
     $('.navbar').toggle({'display':'block'})
   }) 
   
-  var x = [];
-  $('.dropdown__content-smenu').find('ul')
-  x = $('.dropdown__content-smenu ul')
-  $('.navbar').find('.navbar__smenu').click((num)=>{
-    // $('.smenu').css({'display':'block'})
-    // jQuery.x[0].css({'display':'block'})
-    // console.log(x[0]);
-  });
+  
 
   
   

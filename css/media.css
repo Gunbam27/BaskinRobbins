@@ -53,6 +53,9 @@
         width: 384px;
     }
     /* main 인스타 그리드 */
+    main .insta h2::before,main .insta h2::after {
+        width: 26%;
+    }
     main .insta__grid {
         padding: 50px 24px;
         grid-template-columns: repeat(3, 238px);
@@ -64,6 +67,7 @@
     }
 }
 @media screen and (max-width: 412px) {
+    /* header 로고 및 햄버거 메뉴 */
     .header__logobox .logo {
         top: 0px;
     }
@@ -90,6 +94,7 @@
     .header__logobox--right-box {
         display:none;
     }
+    /* header 네비게이션 드롭다운 메뉴 */
     .header .navbar {
         display:none;
         position: absolute;
@@ -116,8 +121,97 @@
     .header .navbar__dropdown .dropdown__content-smenu .smenu li{
         padding:20px 0;
     }
+    /* main 롤링배너 */
+    main .banner__slide .slide__cont .slide__txt {
+        position: relative;
+        padding: 75px 300px 0 50px;
+        z-index: 20;
+    }
+    main .banner__slide .slide__cont .slide__pagenb .page {
+        width: 115px;
+    }
+    main .banner__indicator {
+        display: none;
+    }
+    main .banner__round #bigRound {
+        transform: rotate(30deg);
+        right: -735px;
+        top: 318px;
+    }
+    main .banner__round #twoRound {
+        left: -92px;
+        top: -116px;
+    }
+    main .banner__smallRound {
+        transform: rotate(134deg);
+        top: 374px;
+        left: 226px;
+    }
+    main .banner__image {
+        top: 285px;
+        left: -10px;
+    }
+    main .banner__image-slide li .bnimg{
+        width: 400px;
+        height: 400px;
+    }
+    /* main 스토어 */
+    main .store h2 {
+        width: 412px;
+    }
+    main .store__image {
+        flex-direction: column;
+        display: flex;
+    }
+    /* main 인스타그리드 */
+    main .insta h2::before,main .insta h2::after {
+        width: 10%;
+    }
+    main .insta__grid {
+        padding: 50px 4px;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(6, 200px);
+    }
+    main .insta__grid img {
+        width: 200px;
+        height: 200px;
+    }
     /* footer */
     footer {
         overflow: hidden;
+    }
+    footer .info {
+        margin: auto;
+        width: 400px;
+    }
+    footer .addr {
+        flex-direction: column;
+    }
+    footer .addr__left h2 a {
+        margin: auto;
+    }
+    footer .addr__left {
+        width: 100%;
+    }
+    footer .addr__left .brand {
+        padding: 20px 0px 20px 8px;
+    }
+    footer .addr__left .brand__list {
+        flex-wrap: wrap;
+    }
+    footer .addr__left .brand__list .li_4 {
+        padding: 10px 10px 0 0;
+    }
+    footer .addr__left .brand__list .li_5 {
+        padding: 10px 10px 0 0;
+    }
+    footer .addr__left .brand__list .li_6 {
+        padding: 10px 10px 0 0;
+    }
+    footer .addr__right {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        width: 100%;
+        padding: 36px 0px;
     }
 }
