@@ -120,7 +120,7 @@ function updateBullet(){
     bullet[bul].classList.add('active');
     setTimeout(() => {
         for (let x of bullet) x.classList.remove('active');
-    }, 3900);
+    }, 3990);
     bul += 1;
 }
 setInterval(()=>{
