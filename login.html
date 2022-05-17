@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배스킨라빈스 - 로그인페이지</title>
+    <!-- login.css -->
+    <link rel="stylesheet" href="css/login.css" />
+    <!-- 미디어쿼리 CSS -->
+    <link rel="stylesheet" href="css/media.css" />
+
+    <!-- 제이쿼리 -->
+    <script src="./src/jquery-3.6.0.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 메인JS -->
+    <script defer src="./src/main.js"></script>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/202b04662c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header__logobox">
+                <div class="logo">
+                    <h1><a href="#">baskin robbins</a></h1>
+                </div>
+                <div class="header__logobox--ham">
+                    <a href="#"><i class="fas fa-solid fa-user"></i></a>
+                    <button type="button"><i class="fas fa-solid fa-bars"></i></button>
+                </div>
+                <div class="header__logobox--left-box">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="header__logobox--right-box">
+                    <ul>
+                        <li><a href="login.html">로그인&nbsp;</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="navbar">
+                <div class="navbar__dropdown">
+                    <ul>
+                        <li class="navbar__smenu">
+                            <a href="#">제품소개</a>
+                        </li>
+                        <li class="navbar__smenu">
+                            <a href="#">영양 성분</a>
+                        </li>
+                        <li class="navbar__smenu">
+                            <a href="#">이벤트</a>
+                        </li>
+                        <li class="navbar__smenu">
+                            <a href="#">매장안내</a>
+                        </li>
+                        <li class="navbar__smenu">
+                            <a href="#">고객센터</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown__content">
+                        <div class="dropdown__content-smenu">
+                            <ul class="smenu">
+                                <li><a href="#">아이스크림</a></li>
+                                <li><a href="#">아이스크림케이크</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">커피</a></li>
+                                <li><a href="#">디저트</a></li>
+                            </ul>
+                            <ul class="smenu">
+                                <li><a href="#">아이스크림</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">커피</a></li>
+                            </ul>
+                            <ul class="smenu">
+                                <li><a href="#">진행중이벤트</a></li>
+                                <li><a href="#">당첨자발표</a></li>
+                            </ul>
+                            <ul class="smenu">
+                                <li><a href="#">매장찾기</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">단체주문</a></li>
+                            </ul>
+                            <ul class="smenu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">채용정보</a></li>
+                                <li><a href="#">점포개설문의</a></li>
+                                <li><a href="#">CONTACT US</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <div class="login-txt">
+                <h2>로그인</h2>
+                <p>해피포인트 회원이 아니시라면 지금 해피포인트에 가입하시고<br/>
+                <span>다양한 혜택을 경험하세요.</span></p>
+            </div>
+            <div class="input-box">
+                <div class="input-box__id">
+                    <label for="mid">
+                        <input
+                        type="text"
+                        id="mid"
+                        class="input"
+                        maxlength="10"
+                        placeholder="아이디"/>
+                    </label>
+                </div>
+                <div class="input-box__pw">
+                    <label for="mpw">
+                        <input
+                        type="password"
+                        id="mpw"
+                        class="input"
+                        maxlength="10"
+                        placeholder="비밀번호"/>
+                    </label>
+                </div>
+            </div>
+            <div class="find-box">
+                <a href="#">아이디 찾기 |</a>
+                <a href="#">비밀번호 재발급</a>
+            </div>
+            <div class="button-box">
+                <div class="button-box__login"><button class="button-box__login-btn btn" type="submit">로그인하기</button></div>
+                <div class="button-box__happymember"><button class="button-box__happymember-btn btn" type="submit">해피포인트 가입</button></div>
+            </div>            
+        </section>
+        <section class="section">
+            <div class="service">
+                <div class="service__spc">
+                    <strong>SPC 통합회원 서비스</strong>
+                    <p>
+                        하나의 ID/Password로 SPC가 운영하는 사이트(배스킨라빈스, 던킨도너츠,<br/>
+                        해피포인트카드, 파리바게뜨, 파리크라상, 파스쿠찌, SPC그룹,우리밀愛)를 한번에!!<br/>
+                        간단한 동의 절차만 거치면 하나의 ID/Password로 제휴사이트를<br/>
+                        로그인 하실 수 있습니다.
+                    </p>
+                </div>
+                <div class="service__serv-center">
+                    <strong>고객센터</strong>
+                    <p>운영시간월~금 09:00~17:30 토/일요일 휴무<br/>Tel.080-555-3131(수신자부담)</p>
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+    <footer>
+        <div class="info">
+            <a href="#">점포개설문의 |</a>
+            <a href="#">채용문의 |</a>
+            <a href="#">윤리신고센터 |</a>
+            <a href="#">이용약관 |</a>
+            <a href="#">개인정보처리방침 |</a>
+            <a href="#">영상정보처리기기운영관리방침 |</a>
+            <a href="#">거래희망회사 사전등록</a>
+        </div>
+        <div class="addr">
+            <div class="addr__left">
+                <h2><a href="#">baskin robbins</a></h2>
+                <address>사업자 등록번호 : 303-81-09535 비알코리아(주)<br/>
+                    대표이사 도세호 서울특별시 서초구 남부순환로 2620(양재동 11-149번지)<br/>
+                    TEL : 080-555-3131 개인정보관리책임자 : 김경우</address>
+                <p>Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.</p>
+                <nav class="brand">
+                    <ul class="brand__list">
+                        <li class="li_1"><a href="#"><img src="./img/addr-icon1.png" alt="HAPPY POINT"/></a></li>
+                        <li class="li_2"><a href="#"><img src="./img/addr-icon2.png" alt="HAPPY MARKET"/></a></li>
+                        <li class="li_3"><a href="#"><img src="./img/addr-icon3.png" alt="SPC그룹 사회공헌활동 SPC 행복한 이야기"/></a></li>
+                        <li class="li_4"><a href="#"><img src="./img/addr-icon4.png" alt="Norton SECURED"/></a></li>
+                        <li class="li_5"><a href="#"><img src="./img/addr-icon5.png" alt="소비자중심경영 인증제도"/></a></li>
+                        <li class="li_6"><a href="#"><img src="./img/addr-icon6.png" alt="국가품질상 - KSA 한국표준협회"/></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="addr__right">
+                <div class="sns">
+                    <ul class="sns__list">
+                        <li><a href="#"><div class="circle"><i class="fab fa-facebook"></i></div></a></li>
+                        <li><a href="#"><div class="circle"><i class="fab fa-twitter"></i></div></a></li>
+                        <li><a href="#"><div class="circle"><i class="fab fa-youtube"></i></div></a></li>
+                        <li><a href="#"><div class="circle"><i class="fab fa-instagram"></i></div></a></li>
+                    </ul>
+                </div>
+                <div class="fam-site">
+                    <a href="#" class="fam-site__drop"><span>Family site</span><i class="fas fa-sort-down"></i></a>
+                    <ul class="fam-site__down">
+                        <li><a href="#">던킨도너츠</a></li>
+                        <li><a href="#">파리바게트</a></li>
+                        <li><a href="#">삼립</a></li>
+                        <li><a href="#">파스쿠찌</a></li>
+                        <li><a href="#">해피포인트카드</a></li>
+                        <li><a href="#">BR코리아</a></li>
+                        <li><a href="#">SPC MAGAZINE</a></li>
+                        <li><a href="#">SPC그룹사이트</a></li>
+                        <li><a href="#">배스킨 스쿨</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

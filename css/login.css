@@ -1,0 +1,76 @@
+@import url(style.css);
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.input {
+  width: 320px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding-left: 15px;
+  color: #888;
+  background-color: #eee;
+}
+
+.btn {
+  width: 320px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+main .login-txt {
+  text-align: center;
+}
+main .login-txt h2 {
+  padding: 20px;
+}
+main .input-box {
+  padding: 40px 0 10px 0;
+  text-align: center;
+}
+main .input-box__id {
+  padding: 20px 0 10px 0;
+}
+main .find-box {
+  text-align: center;
+  padding-bottom: 15px;
+}
+main .button-box {
+  text-align: center;
+}
+main .button-box__login {
+  padding: 20px 0 10px 0;
+}
+main .button-box__login-btn {
+  color: #fff;
+  border: none;
+  background-color: #FC60AA;
+}
+main .button-box__happymember {
+  padding: 0 0 20px 0;
+}
+main .button-box__happymember-btn {
+  color: #FC60AA;
+  border: 1px solid #999;
+  background-color: #fff;
+}
+main .service {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 20px 0;
+  width: 800px;
+  border-top: 1px solid #bbb;
+  font-size: 12px;
+}
+main .service__spc {
+  width: 465px;
+}
+
+/*# sourceMappingURL=login.css.map */

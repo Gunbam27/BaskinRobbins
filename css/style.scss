@@ -102,9 +102,6 @@ header{max-width: 1920px;margin: auto;}
         border-bottom: 1px solid #ccc;
         
         &__dropdown{
-            // float: left;
-            // disply:flex;
-            // overflow: hidden;
             &:hover .dropdown__content{
                 display: block;
             }
@@ -128,6 +125,7 @@ header{max-width: 1920px;margin: auto;}
                 top:146px;
                 left: 0;
                 max-width: 1920px;
+                width:100%;
                 height: 350px;
                 padding:0 367px;
                 z-index: 30;
