@@ -8,9 +8,6 @@
     .header .navbar__dropdown .dropdown__content-smenu {
         justify-content: flex-start;
     }
-    .header .navbar__dropdown .dropdown__content-smenu {
-        width: 768px;
-    }
     /* main 롤링배너 */
     main .banner__slide .slide__cont .slide__txt {
         padding: 537px 300px 0 46px;
